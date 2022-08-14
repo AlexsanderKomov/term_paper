@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchard - художественная галерея</title>
+  <link rel="stylesheet" href="libs/choices.min.css">
+  <link rel="stylesheet" href="libs/graph-modal.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="libs/swiper.min.css">
+  <link rel="stylesheet" href="css/normalaiz.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="libs/choices.min.js"></script>
+  <script defer src="libs/graph-modal.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="libs/swiper.min.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__top">
+        <div class="header__wrapper">
+          <a class="header__logo" href="#">
+            <img src="img/header/logo.svg" alt="Логотип Blanchard">
+          </a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Галерея
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                События
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Проекты
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="header__btn">Войти</button>
+      </div>
+      <div class="header-bottom">
+        <ul class="header-bottom__list menu">
+          <li class="header-bottom__item header-bottom__item-default" data-path="one">
+            <a class="header-bottom__link" href="#">
+              Реализм
+            </a>
+            <ul class="menu__list" data-simplebar data-simplebar-auto-hide="false" data-target="one">
+              <li class="menu__item">
+                <a class="menu__link menu__link-one" href="#">
+                  Тинторетто
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-two" href="#">
+                  Фридрих
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-three" href="#">
+                  Леонардо
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-four" href="#">
+                  Верроккьо
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-one" href="#">
+                  Тинторетто
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-two" href="#">
+                  Фридрих
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-three" href="#">
+                  Леонардо
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-four" href="#">
+                  Верроккьо
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-bottom__item header-bottom__item-default" data-path="two">
+            <a class="header-bottom__link" href="#">
+              Импрессионизм
+            </a>
+            <ul class="menu__list" data-simplebar data-simplebar-auto-hide="false" data-target="two">
+              <li class="menu__item">
+                <a class="menu__link menu__link-five" href="#">
+                  Моне
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-six" href="#">
+                  Сислей
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-seven" href="#">
+                  Мане
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-eight" href="#">
+                  Ренуар
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-bottom__item header-bottom__item-default" data-path="three">
+            <a class="header-bottom__link" href="#">
+              Постимпрессионизм
+            </a>
+            <ul class="menu__list" data-simplebar data-simplebar-auto-hide="false" data-target="three">
+              <li class="menu__item">
+                <a class="menu__link menu__link-nine" href="#">
+                  Ван Гог
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-ten" href="#">
+                  Сезанн
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-eleven" href="#">
+                  Гоген
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-twelve" href="#">
+                  Сёра
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-bottom__item header-bottom__item-default" data-path="four">
+            <a class="header-bottom__link header-bottom__link--pr" href="#">
+              Авангард
+            </a>
+            <ul class="menu__list" data-simplebar data-simplebar-auto-hide="false" data-target="four">
+              <li class="menu__item">
+                <a class="menu__link menu__link-thirteen" href="#">
+                  Кандинский
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-fourteen" href="#">
+                  Маринетти
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-fifteen" href="#">
+                  Малевич
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-sixteen" href="#">
+                  Пикассо
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-bottom__item header-bottom__item-default" data-path="five">
+            <a class="header-bottom__link" href="#">
+              Футуризм
+            </a>
+            <ul class="menu__list" data-simplebar data-simplebar-auto-hide="false" data-target="five">
+              <li class="menu__item">
+                <a class="menu__link menu__link-seventeen" href="#">
+                  Карра
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-eighteen" href="#">
+                  Прателла
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-nineteen" href="#">
+                  Северини
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link-twenty" href="#">
+                  Балла
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="header-bottom__form">
+          <input class="header-bottom__search" placeholder="Поиск по сайту">
+        </form>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__wrapper">
+          <h1 class="hero__title">
+            Прикоснитесь к прекрасному
+          </h1>
+          <p class="hero__descr">
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений
+          </p>
+          <button class="hero__btn">Подписаться на рассылку</button>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-one"></div>
+            <div class="swiper-slide swiper-slide-two"></div>
+            <div class="swiper-slide swiper-slide-three"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container about__container">
+        <h2 class="title about__title">
+          О нас
+        </h2>
+        <p class="descr about__descr">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечёт
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="container gallery__container">
+        <div class="gallery__left">
+          <div class="gallery__top">
+            <h2 class="title gallery__title">Галерея</h2>
+            <span class="gallery__nav">
+              Фильтр:
+            </span>
+          </div>
+          <form class="gallery__form">
+            <select class="gallery__select">
+              <option value="">Живопись</option>
+              <option value="">Рисунок</option>
+              <option value="">Скульптура</option>
+            </select>
+            <div class="gallery__century century">
+              <ul class="century__list">
+                <li class="century__item">
+                  <label class="century__label" for="nineteen">
+                    <input class="century__input" type="checkbox" name="nineteen" id="nineteen">XIX век
+                    <span class="century__check"></span>
+                  </label>
+                </li>
+                <li class="century__item">
+                  <label class="century__label" for="twenty">
+                    <input class="century__input" checked type="checkbox" name="twenty" id="twenty">XX век
+                    <span class="century__check"></span>
+                  </label>
+                </li>
+                <li class="century__item">
+                  <label class="century__label" for="modernity">
+                    <input class="century__input" type="checkbox" name="modernity" id="modernity">Современность
+                    <span class="century__check"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <div class="gallery__rigth">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="gallery__swiper">
+            <div class="gallery__wrapper">
+              <div class="gallery__slide gallery__slide-one" data-graph-path="one"></div>
+              <div class="gallery__slide gallery__slide-two" data-graph-path="two"></div>
+              <div class="gallery__slide gallery__slide-three" data-graph-path="three"></div>
+              <div class="gallery__slide gallery__slide-four" data-graph-path="four"></div>
+              <div class="gallery__slide gallery__slide-five" data-graph-path="five"></div>
+              <div class="gallery__slide gallery__slide-six" data-graph-path="six"></div>
+            </div>
+          </div>
+          <div class="gallery__modals graph-modal">
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="one">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="two">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="three">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="four">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="five">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="six">
+              <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+              </button>
+              <div class="graph-modal__content">
+                <img class="graph-modal__img" src="img/gallery/modal-1-desktop.jpg" alt="painting">
+                <div class="graph-modal__wrapper">
+                  <h3 class="graph-modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <h4 class="graph-modal__subtitle">
+                    «Женщина с граблями»
+                  </h4>
+                  <span class="graph-modal__years">1931–1932</span>
+                  <p class="graph-modal__descr">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян
+                    после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container catalog__container">
+        <h2 class="title catalog__title">Каталог</h2>
+        <p class="descr catalog__descr">
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+          лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей
+          день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+        </p>
+        <div class="catalog__tabs">
+          <div class="catalog__left tabs">
+            <div class="tabs__content tabs__content-one" data-tabs-target="one">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Бенедетто ди Биндо" aria-label="Изображение Бенедетто ди Биндо">
+              <h3 class="tabs__subtitle subtitle">Бенедетто ди Биндо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-two" data-tabs-target="two">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Бергоньоне, Амброджо" aria-label="Изображение Бергоньоне, Амброджо">
+              <h3 class="tabs__subtitle subtitle">Бергоньоне, Амброджо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-three" data-tabs-target="three">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Биссоло, Франческо" aria-label="Изображение Биссоло, Франческо">
+              <h3 class="tabs__subtitle subtitle">Биссоло, Франческо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-four" data-tabs-target="four">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Больтраффио, Джованни" aria-label="Изображение Больтраффио, Джованни">
+              <h3 class="tabs__subtitle subtitle">Больтраффио, Джованни</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-five" data-tabs-target="five">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Бонсиньори, Франческо" aria-label="Изображение Бонсиньори, Франческо">
+              <h3 class="tabs__subtitle subtitle">Бонсиньори, Франческо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-six" data-tabs-target="six">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Боттичини, Рафаэлло" aria-label="Изображение Боттичини, Рафаэлло">
+              <h3 class="tabs__subtitle subtitle">Боттичини, Рафаэлло</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-seven" data-tabs-target="seven">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Брамантино" aria-label="Изображение Брамантино">
+              <h3 class="tabs__subtitle subtitle">Брамантино</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-eight" data-tabs-target="eight">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Бреа, Людовико" aria-label="Изображение Бреа, Людовико">
+              <h3 class="tabs__subtitle subtitle">Бреа, Людовико</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-nine" data-tabs-target="nine">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Бьяджо д’Антонио Туччи" aria-label="Изображение Бьяджо д’Антонио Туччи">
+              <h3 class="tabs__subtitle subtitle">Бьяджо д’Антонио Туччи</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-ten" data-tabs-target="ten">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Веккьетта" aria-label="Изображение Веккьетта">
+              <h3 class="tabs__subtitle subtitle">Веккьетта</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-eleven" data-tabs-target="eleven">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Андреа Верроккьо" aria-label="Изображение Андреа Верроккьо">
+              <h3 class="tabs__subtitle subtitle">Андреа Верроккьо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twelve tabs__content--active" data-tabs-target="twelve">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Доменико Гирландайо" aria-label="Изображение Доменико Гирландайо">
+              <h3 class="tabs__subtitle subtitle">Доменико Гирландайо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-thirteen" data-tabs-target="thirteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Беноццо Гоццоли" aria-label="Изображение Беноццо Гоццоли">
+              <h3 class="tabs__subtitle subtitle">Беноццо Гоццоли</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-fourteen" data-tabs-target="fourteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Граначчи, Франческо" aria-label="Изображение Граначчи, Франческо">
+              <h3 class="tabs__subtitle subtitle">Граначчи, Франческо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-fifteen" data-tabs-target="fifteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Грегорио ди Чекко" aria-label="Изображение Грегорио ди Чекко">
+              <h3 class="tabs__subtitle subtitle">Грегорио ди Чекко</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-sixteen" data-tabs-target="sixteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Джованни да Удине" aria-label="Изображение Джованни да Удине">
+              <h3 class="tabs__subtitle subtitle">Джованни да Удине</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-seventeen" data-tabs-target="seventeen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Джованни ди Паоло" aria-label="Изображение Джованни ди Паоло">
+              <h3 class="tabs__subtitle subtitle">Джованни ди Паоло</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-eighteen" data-tabs-target="eighteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Джорджоне" aria-label="Изображение Джорджоне">
+              <h3 class="tabs__subtitle subtitle">Джорджоне</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-nineteen" data-tabs-target="nineteen">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Парентино, Бернардо" aria-label="Изображение Парентино, Бернардо">
+              <h3 class="tabs__subtitle subtitle">Парентино, Бернардо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twenty" data-tabs-target="twenty">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Пезеллино" aria-label="Изображение Пезеллино">
+              <h3 class="tabs__subtitle subtitle">Пезеллино</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twenty-one" data-tabs-target="twenty-one">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Пьетро Перуджино" aria-label="Изображение Пьетро Перуджино">
+              <h3 class="tabs__subtitle subtitle">Пьетро Перуджино</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twenty-two" data-tabs-target="twenty-two">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Перуцци, Бальдассаре" aria-label="Изображение Перуцци, Бальдассаре">
+              <h3 class="tabs__subtitle subtitle">Перуцци, Бальдассаре</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twenty-three" data-tabs-target="twenty-three">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Пизанелло" aria-label="Изображение Пизанелло">
+              <h3 class="tabs__subtitle subtitle">Пизанелло</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="tabs__content tabs__content-twenty-four" data-tabs-target="twenty-four">
+              <img class="tabs__img" width="750px" height="470px" src="img/catalog/hero-1.jpg"
+                alt="Изображение Пинтуриккьо" aria-label="Изображение Пинтуриккьо">
+              <h3 class="tabs__subtitle subtitle">Пинтуриккьо</h3>
+              <span class="tabs__time time">
+                <time datetime="1448-06-02">2 июня 1448</time>
+                -
+                <time datetime="1494-01-11">11 января 1494</time>
+              </span>
+              <p class="descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+          </div>
+          <div class="catalog__right">
+            <div class="catalog__accordion" id="accordion">
+              <button class="catalog__btn">C 1400 по 1499 гг</button>
+              <div class="catalog__content">
+                <ul class="catalog__list">
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="one">Бенедетто ди Биндо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="two">Бергоньоне, Амброджо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="three">Биссоло, Франческо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="four">Больтраффио, Джованни</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="five">Бонсиньори, Франческо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="six">Боттичини, Рафаэлло</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="seven">Брамантино</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="eight">Бреа, Людовико</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="nine">Бьяджо д’Антонио Туччи</button>
+                  </li>
+                </ul>
+                <ul class="catalog__list">
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="ten">Веккьетта</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="eleven">Андреа Верроккьо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twelve">Доменико Гирландайо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="thirteen">Беноццо Гоццоли</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="fourteen">Граначчи, Франческо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="fifteen">Грегорио ди Чекко</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="sixteen">Джованни да Удине</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="seventeen">Джованни ди Паоло</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="eighteen">Джорджоне</button>
+                  </li>
+                </ul>
+                <ul class="catalog__list">
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="nineteen">Парентино, Бернардо</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twenty">Пезеллино</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twenty-one">Пьетро Перуджино</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twenty-two">Перуцци, Бальдассаре</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twenty-three">Пизанелло</button>
+                  </li>
+                  <li class="catalog__item">
+                    <button class="catalog__name" data-tabs-path="twenty-four">Пинтуриккьо</button>
+                  </li>
+                </ul>
+              </div>
+              <button class="catalog__btn">C 1500 по 1599 гг</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+              <button class="catalog__btn">C 1600 по 1699 гг</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+              <button class="catalog__btn">C 1700 по 1799 гг</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+              <button class="catalog__btn">C 1800 по 1899 гг</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+              <button class="catalog__btn">C 1900 по 1999 гг</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+              <button class="catalog__btn">C 2000 г</button>
+              <div class="catalog__content catalog__content-offset">
+                <span class="catalog__nothing"></span>
+                <div class="catalog__wrapper">
+                  <h3 class="catalog__subtitle">Здесь пока пусто</h3>
+                  <p class="catalog__description">
+                    А в галереи вы всегда можете найти что-то интересное для себя
+                  </p>
+                  <a class="catalog__link" href="#">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="developments">
+      <div class="container developments__container">
+        <h2 class="title developments__title">События</h2>
+        <div class="developments__swiper-button developments__swiper-button-prev"></div>
+        <div class="developments__swiper-button developments__swiper-button-next"></div>
+        <div class="developments__swiper">
+          <div class="developments__swiper-wrapper">
+            <div class="developments__swiper-slide developments__swiper-slide-one">
+              <span class="time development__time">
+                Музей им. Щусева
+                <br>
+                с 20 марта по 30 апреля
+              </span>
+              <h3 class="subtitle development__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
+              <p class="descr development__descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо
+              </p>
+              <a class="development__link" href="#">Подробнее</a>
+            </div>
+            <div class="developments__swiper-slide developments__swiper-slide-two">
+              <span class="time development__time">
+                ММОМА
+                <br>
+                24 марта 19:00
+              </span>
+              <h3 class="subtitle development__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей
+                Ильин.</h3>
+              <p class="descr development__descr">
+                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого
+                факта
+              </p>
+              <a class="development__link" href="#">Подробнее</a>
+            </div>
+            <div class="developments__swiper-slide developments__swiper-slide-three">
+              <span class="time development__time">
+                Еврейский музей
+                <br>
+                с 31 марта по 21 апреля
+              </span>
+              <h3 class="subtitle development__subtitle">Выставка &laquo;Формация 2020&raquo;</h3>
+              <p class="descr development__descr">
+                Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль
+                в&nbsp;формировании глубокомысленных рассуждений
+              </p>
+              <a class="development__link" href="#">Подробнее</a>
+            </div>
+            <div class="developments__swiper-slide developments__swiper-slide-four">
+              <span class="time development__time">
+                ММАМ
+                <br>
+                с 8 апреля по 20 мая
+              </span>
+              <h3 class="subtitle development__subtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора&raquo;
+              </h3>
+              <p class="descr development__descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо
+              </p>
+              <a class="development__link" href="#">Подробнее</a>
+            </div>
+            <div class="developments__swiper-slide developments__swiper-slide-five">
+              <span class="time development__time">
+                Третьяковка на Крымском валу
+                <br>
+                с 30 марта по 30 апреля
+              </span>
+              <h3 class="subtitle development__subtitle">XXIV Международная биеннале молодого искусства</h3>
+              <p class="descr development__descr">
+                Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования
+              </p>
+              <a class="development__link" href="#">Подробнее</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="project">
+      <div class="container project__container">
+        <h2 class="project__title title">Проекты</h2>
+        <p class="project__descr descr">Предварительные выводы: постоянное информационно-пропагандистское обеспечение
+          нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
+          независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости,
+          из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
+          <span class="project__tooltip"></span> обеспечение нашей деятельности однозначно фиксирует необходимость
+          экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции
+          могут быть рассмотрены <span class="project__tooltip"></span> исключительно в&nbsp;разрезе маркетинговых
+          и&nbsp;финансовых <span class="project__tooltip"></span> предпосылок. Банальные, но&nbsp;неопровержимые
+          выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям,
+          которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
+          совершённой неузнаваемости. Подробнее: <a class="project__link" href="#">blanchard-art.ru/projects</a>
+        </p>
+        <h2 class="project__subtitle subtitle">Партнёры проектов:</h2>
+        <div class="project__swiper-button-next"></div>
+        <div class="project__swiper-button-prev"></div>
+        <div class="project__swiper">
+          <div class="project__wrapper">
+            <div class="project__slide project__slide-one">
+            </div>
+            <div class="project__slide project__slide-two">
+            </div>
+            <div class="project__slide project__slide-three">
+            </div>
+            <div class="project__slide project__slide-four">
+            </div>
+            <div class="project__slide project__slide-five">
+            </div>
+            <div class="project__slide project__slide-six">
+            </div>
+            <div class="project__slide project__slide-seven">
+            </div>
+            <div class="project__slide project__slide-eight">
+            </div>
+            <div class="project__slide project__slide-nine">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="connection">
+      <div class="container connection__container">
+        <div class="connection__top">
+          <div class="connection__address">
+            <p class="connection__dot">Шоурум №4</p>
+            <address class="connection__street">Леонтьевский переулок, дом 5/1</address>
+          </div>
+          <form action="#" class="connection__form">
+            <input class="connection__data" type="text" placeholder="Имя*">
+            <input class="connection__data" type="tel" placeholder="телефон*">
+            <button class="connection__btn" type="submit">Заказать обратный звонок</button>
+          </form>
+          <div class="connection__click">
+            <span class="connection__connect">Связаться в один клик</span>
+            <div class="connection__social">
+              <a class="connection__link connection__link-wa" href="#"></a>
+              <a class="connection__link connection__link-teleg" href="#"></a>
+            </div>
+          </div>
+        </div>
+        <div class="map" id="map" style="width: 1895px; height: 700px;">
+          <script src="https://api-maps.yandex.ru/2.1/?apikey=ddd02c4b-9f8f-4f16-94a7-5b04603c71d4&lang=ru_RU">
+          </script>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <a href="#" class="footer__link">
+        <img src="img/header/logo.svg" alt="Логотип Blanchard">
+      </a>
+      <ul class="footer__list social">
+        <li class="footer__item">
+          <a href="#" class="social__link social__link-vk"></a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="social__link social__link-ok"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

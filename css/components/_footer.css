@@ -1,0 +1,41 @@
+.footer {
+  padding: 50px 143px 45px 160px;
+  background-color: #000;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.footer__list {
+  display: flex;
+}
+
+.footer__item {
+  width: 45px;
+  height: 45px;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-3px);
+}
+
+.social__link-vk {
+  background-image: url(../../img/vkontakte.svg);
+}
+
+.social__link-ok {
+  background-image: url(../../img/ok.svg);
+}

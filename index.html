@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="libs/swiper.min.css">
   <link rel="stylesheet" href="css/normalaiz.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script defer src="https://unpkg.com/tippy.js@6"></script>
   <script defer src="libs/choices.min.js"></script>
   <script defer src="libs/graph-modal.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -313,12 +315,24 @@
           <div class="swiper-button-next"></div>
           <div class="gallery__swiper">
             <div class="gallery__wrapper">
-              <div class="gallery__slide gallery__slide-one" data-graph-path="one"></div>
-              <div class="gallery__slide gallery__slide-two" data-graph-path="two"></div>
-              <div class="gallery__slide gallery__slide-three" data-graph-path="three"></div>
-              <div class="gallery__slide gallery__slide-four" data-graph-path="four"></div>
-              <div class="gallery__slide gallery__slide-five" data-graph-path="five"></div>
-              <div class="gallery__slide gallery__slide-six" data-graph-path="six"></div>
+              <div class="gallery__slide gallery__slide-one" data-graph-path="one">
+                <img src="img/gallery/gallery-slide-1.jpg" alt="">
+              </div>
+              <div class="gallery__slide gallery__slide-two" data-graph-path="two">
+                <img src="img/gallery/gallery-slide-2.jpg" alt="">
+              </div>
+              <div class="gallery__slide gallery__slide-three" data-graph-path="three">
+                <img src="img/gallery/gallery-slide-3.jpg" alt="">
+              </div>
+              <div class="gallery__slide gallery__slide-four" data-graph-path="four">
+                <img src="img/gallery/gallery-slide-4.jpg" alt="">
+              </div>
+              <div class="gallery__slide gallery__slide-five" data-graph-path="five">
+                <img src="img/gallery/gallery-slide-5.jpg" alt="">
+              </div>
+              <div class="gallery__slide gallery__slide-six" data-graph-path="six">
+                <img src="img/gallery/gallery-slide-6.jpg" alt="">
+              </div>
             </div>
           </div>
           <div class="gallery__modals graph-modal">
@@ -874,7 +888,7 @@
           </div>
           <div class="catalog__right">
             <div class="catalog__accordion" id="accordion">
-              <button class="catalog__btn">C 1400 по 1499 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1400 по 1499 гг</span></button>
               <div class="catalog__content">
                 <ul class="catalog__list">
                   <li class="catalog__item">
@@ -904,8 +918,6 @@
                   <li class="catalog__item">
                     <button class="catalog__name" data-tabs-path="nine">Бьяджо д’Антонио Туччи</button>
                   </li>
-                </ul>
-                <ul class="catalog__list">
                   <li class="catalog__item">
                     <button class="catalog__name" data-tabs-path="ten">Веккьетта</button>
                   </li>
@@ -933,8 +945,6 @@
                   <li class="catalog__item">
                     <button class="catalog__name" data-tabs-path="eighteen">Джорджоне</button>
                   </li>
-                </ul>
-                <ul class="catalog__list">
                   <li class="catalog__item">
                     <button class="catalog__name" data-tabs-path="nineteen">Парентино, Бернардо</button>
                   </li>
@@ -955,7 +965,7 @@
                   </li>
                 </ul>
               </div>
-              <button class="catalog__btn">C 1500 по 1599 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1500 по 1599 гг</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -966,7 +976,7 @@
                   <a class="catalog__link" href="#">В галерею</a>
                 </div>
               </div>
-              <button class="catalog__btn">C 1600 по 1699 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1600 по 1699 гг</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -977,7 +987,7 @@
                   <a class="catalog__link" href="#">В галерею</a>
                 </div>
               </div>
-              <button class="catalog__btn">C 1700 по 1799 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1700 по 1799 гг</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -988,7 +998,7 @@
                   <a class="catalog__link" href="#">В галерею</a>
                 </div>
               </div>
-              <button class="catalog__btn">C 1800 по 1899 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1800 по 1899 гг</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -999,7 +1009,7 @@
                   <a class="catalog__link" href="#">В галерею</a>
                 </div>
               </div>
-              <button class="catalog__btn">C 1900 по 1999 гг</button>
+              <button class="catalog__btn"><span class="catalog__date">C 1900 по 1999 гг</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -1010,7 +1020,7 @@
                   <a class="catalog__link" href="#">В галерею</a>
                 </div>
               </div>
-              <button class="catalog__btn">C 2000 г</button>
+              <button class="catalog__btn"><span class="catalog__date">C 2000 г</span></button>
               <div class="catalog__content catalog__content-offset">
                 <span class="catalog__nothing"></span>
                 <div class="catalog__wrapper">
@@ -1112,10 +1122,10 @@
           нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
           независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости,
           из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
-          <span class="project__tooltip"></span> обеспечение нашей деятельности однозначно фиксирует необходимость
+          <span class="project__tooltip project__tooltip-one"></span> обеспечение нашей деятельности однозначно фиксирует необходимость
           экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции
-          могут быть рассмотрены <span class="project__tooltip"></span> исключительно в&nbsp;разрезе маркетинговых
-          и&nbsp;финансовых <span class="project__tooltip"></span> предпосылок. Банальные, но&nbsp;неопровержимые
+          могут быть рассмотрены <span class="project__tooltip project__tooltip-two"></span> исключительно в&nbsp;разрезе маркетинговых
+          и&nbsp;финансовых <span  class="project__tooltip project__tooltip-three"></span> предпосылок. Банальные, но&nbsp;неопровержимые
           выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям,
           которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
           совершённой неузнаваемости. Подробнее: <a class="project__link" href="#">blanchard-art.ru/projects</a>
@@ -1169,7 +1179,7 @@
             </div>
           </div>
         </div>
-        <div class="map" id="map" style="width: 1895px; height: 700px;">
+        <div class="map" id="map">
           <script src="https://api-maps.yandex.ru/2.1/?apikey=ddd02c4b-9f8f-4f16-94a7-5b04603c71d4&lang=ru_RU">
           </script>
         </div>

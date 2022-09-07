@@ -54,7 +54,7 @@
 }
 
 .hero__btn:hover {
-  border-color: #d1a9f0;
+  border-color: var(--color-vsv);
 }
 
 .hero__btn::after {
@@ -69,12 +69,12 @@
   transition: outline-color .3s ease-in-out;
 }
 
-.hero__btn:focus::after {
+.hero__btn:active::after {
   outline: none;
 }
 
-.hero__btn:focus {
-  border-color: #d1a9f0;
+.hero__btn:active {
+  border-color: var(--color-vsv);
   background-color: var(--color-active);
 }
 

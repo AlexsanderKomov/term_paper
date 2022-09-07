@@ -1,3 +1,5 @@
+// Скролл в выпадающем списке в header
+
 document.querySelectorAll('.menu__list').forEach(el => {
   new SimpleBar(el, {
     scrollbarMinSize: 28,
@@ -5,6 +7,8 @@ document.querySelectorAll('.menu__list').forEach(el => {
   });
 });
 
+
+// Выпадающий список в header
 
 let headerBottomItem = document.querySelectorAll('.header-bottom__item');
 let body = document.querySelector('.body');
@@ -29,6 +33,9 @@ const swiper = new Swiper('.swiper', {
   loop: true,
 });
 
+
+// swiper in header
+
 const gallerySwiper = new Swiper('.gallery__swiper', {
   wrapperClass: 'gallery__wrapper',
   slideClass: 'gallery__slide',
@@ -36,7 +43,6 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
   spaceBetween: 50,
   calculateHeight:true,
   slidesPerGroup: 3,
-  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -48,6 +54,9 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
   }
 });
 
+
+// фильтр в галереи
+
 const element = document.querySelector('.gallery__select');
 
 const choices = new Choices(element, {
@@ -57,18 +66,30 @@ const choices = new Choices(element, {
   allowHTML: true,
 });
 
+
+// модальное окно в галерее
+
 const modal = new GraphModal();
 
-document.querySelector('.gallery__slide').addEventListener('click', () => {
+
+// свайпер в галереи
+
+document.querySelector('.gallery__slide').addEventListener('click', (e) => {
   let path = e.currentTarget.getAttribute('data-graph-path');
 	new GraphModal().open(`[data-graph-target="${path}"]`);
 });
+
+
+// аккардион в каталоге
 
 $( "#accordion" ).accordion({
   animate: 5,
   heightStyle: "content",
   collapsible: true
 });
+
+
+// табы в каталоге
 
 let catalogName = document.querySelectorAll('.catalog__name');
 let tabs = document.querySelectorAll('.tabs__content');
@@ -85,6 +106,8 @@ catalogName.forEach((el) => {
 });
 
 
+// свайпер в событиях
+
 const swiperDevelopment = new Swiper('.developments__swiper', {
   wrapperClass: 'developments__swiper-wrapper',
   slideClass: 'developments__swiper-slide',
@@ -98,6 +121,9 @@ const swiperDevelopment = new Swiper('.developments__swiper', {
 
 });
 
+
+// свайпер в проектах
+
 const swiperProject = new Swiper('.project__swiper', {
   wrapperClass: 'project__wrapper',
   slideClass: 'project__slide',
@@ -105,12 +131,14 @@ const swiperProject = new Swiper('.project__swiper', {
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 50,
-  loop: true,
   navigation: {
     nextEl: '.project__swiper-button-next',
     prevEl: '.project__swiper-button-prev',
   },
 })
+
+
+// карта
 
 let center = [55.75846806898367,37.60108849999989];
 
@@ -130,7 +158,45 @@ ymaps.ready(init);
           iconImageOffset: [-4, -10]
         });
 
+        // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+        myMap.controls.remove('searchControl'); // удаляем поиск
+        myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+        myMap.controls.remove('typeSelector'); // удаляем тип
+        myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+        // myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+        myMap.controls.remove('rulerControl'); // удаляем контрол правил
+        myMap.behaviors.disable(['scrollZoom']);
+
         myMap.geoObjects.add(myPlacemark);
     }
+
+// tooltip
+
+tippy('.project__tooltip-one', {
+  animation: 'scale',
+  content: 'Пример современных тенденций — современная методология разработки',
+  maxWidth: 264,
+  arrow: true,
+  theme: 'amethyst',
+  trigger: 'click'
+});
+
+tippy('.project__tooltip-two', {
+  animation: 'scale',
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  maxWidth: 264,
+  arrow: true,
+  theme: 'amethyst',
+  trigger: 'click',
+});
+
+tippy('.project__tooltip-three', {
+  animation: 'scale',
+  content: 'В стремлении повысить качество',
+  maxWidth: 264,
+  arrow: true,
+  theme: 'amethyst',
+  trigger: 'click',
+});
 
 

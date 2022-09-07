@@ -68,6 +68,8 @@ body {
   --color-active: #7943a4;
   --ligth-gray: #cacaca;
   --color-time: #999;
+  --color-bl: #000;
+  --color-vsv: #d1a9f0;
 }
 
 :where(p[class],ul[class]) {

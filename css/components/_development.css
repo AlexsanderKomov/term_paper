@@ -70,20 +70,50 @@
 
 .development__link {
   position: relative;
-  width: 88px;
+  padding: 2px 8px 6px 8px;
+  width: 103px;
   font-size: 16px;
   line-height: 32px;
+  outline: none;
   color: var(--color-amethyst);
+  transform: translate(-8px, 4px);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-.development__link::after {
+.development__link::before {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: 4px;
+  left: 8px;
+  bottom: 8px;
   height: 1px;
-  width: 100%;
+  width: 86px;
   background-color: var(--color-amethyst);
+  transition: background-color .3s ease-in-out;
+}
+
+.development__link:focus {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.development__link:focus::before {
+  background-color: var(--color-white);
+}
+
+.development__link:hover {
+  color: var(--color-active);
+}
+
+.development__link:hover::before {
+  background-color: var(--color-active);
+}
+
+.development__link:active {
+  color: var(--color-bl);
+}
+
+.development__link:active::before {
+  background-color: var(--color-bl);
 }
 
 .developments__swiper-button {
@@ -92,6 +122,7 @@
   border-radius: 100%;
   width: 50px;
   height: 50px;
+  outline: 2px solid transparent;
   background-color: #ececec;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,6 +130,7 @@
   transform: translateY(-45%);
   cursor: pointer;
   z-index: 100;
+  transition: background-color.3s ease-in-out, outline-color .3s ease-in-out;
 }
 
 .developments__swiper-button-prev {
@@ -111,7 +143,19 @@
   background-image: url(../../img/developments-arrow-next.svg);
 }
 
-.swiper-button-disabled {
+.developments__swiper-button:hover {
+  background-color: var(--color-vsv);
+}
+
+.developments__swiper-button:focus {
+  outline-color: var(--color-amethyst);
+}
+
+.developments__swiper-button:active {
+  outline-color: var(--color-amethyst);
+}
+
+.developments__container .swiper-button-disabled {
   visibility: hidden;
 }
 

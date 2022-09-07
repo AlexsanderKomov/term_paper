@@ -4,7 +4,6 @@
   flex-direction: column;
   padding-right: 5px;
   padding-left: 23px;
-  padding-bottom: 700px;
 }
 
 .connection__top {
@@ -98,12 +97,18 @@
 }
 
 .map {
-  position: absolute;
-  top: 153px;
-  left: -130px;
+  position: relative;
+  left: -157px;
+  width: 1900px;
+  height: 700px;
+  overflow: hidden;
 }
 
 [class*="ground-pane"] {
   filter: grayscale(1);
+}
+
+[class*="copyrights-pane"] {
+  display: none;
 }
 

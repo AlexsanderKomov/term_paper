@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 28px 128px 29px 145px;
-  background-color: #000;
+  background-color: var(--color-bl);
 }
 
 .header-bottom {
@@ -145,6 +145,7 @@
   left: -5px;
   background-color: transparent;
   transition: background-color .3s ease-in-out;
+  pointer-events: none;
 }
 
 .header-bottom__link:hover {
@@ -161,12 +162,11 @@
   background-color: var(--color-active);
 }
 
-
 .header-bottom__form {
   position: relative;
   top: 1px;
-  right: 0;
-  padding-left: 38px;
+  right: -8px;
+  padding-left: 39px;
   font-size: 18px;
   line-height: 25px;
   outline: none;
@@ -178,28 +178,37 @@
   background-position: -1px 3px;
 }
 
-.header-bottom__form::after {
-  content: '';
-  position: absolute;
-  top: 95%;
-  right: 0;
-  height: 1px;
-  width: 218px;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
 .header-bottom__search {
   position: relative;
-  right: 8px;
+  right: 7px;
+  display: inline-block;
   padding: 0;
+  padding-bottom: 1px;
+  min-width: 218px;
   outline: none;
   border: none;
+  border-bottom: 1px solid var(--color-white);
   color: rgba(255, 255, 255, 0.85);
   background-color: transparent;
+  transition: border-color .3s ease-in-out;
+}
+
+.header-bottom__search:active,
+.header-bottom__search:hover {
+  border-color: var(--color-hover);
+}
+
+.header-bottom__search:focus {
+  border-color: var(--color-active);
 }
 
 .header-bottom__search::placeholder {
   color: rgba(255, 255, 255, 0.85);
+  transition: color .3s ease-in-out;
+}
+
+.header-bottom__search:focus::placeholder {
+  color: transparent;
 }
 
 .menu__list {
@@ -226,7 +235,7 @@
   bottom: 40px;
   right: 10px;
   width: 2px;
-  background: #000;
+  background: var(--color-bl);
 }
 
 .simplebar-scrollbar::before {
@@ -274,19 +283,16 @@
 .menu__link::after {
   content: '';
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background: transparent;
-  transition: background .3s ease-in-out;
-  opacity: 0;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
 }
 
 .menu__link:active::after {
-  background: #c283f3;
-  opacity: 0.4;
+  background-color: rgba(194, 131, 243, 0.4);
 }
 
 .menu__link-one {

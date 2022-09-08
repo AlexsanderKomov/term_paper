@@ -13,13 +13,15 @@
   <link rel="stylesheet" href="libs/swiper.min.css">
   <link rel="stylesheet" href="css/normalaiz.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script defer src="https://unpkg.com/@popperjs/core@2"></script>
   <script defer src="https://unpkg.com/tippy.js@6"></script>
   <script defer src="libs/choices.min.js"></script>
   <script defer src="libs/graph-modal.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="libs/just-validate.min.js"></script>
   <script defer src="libs/swiper.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
@@ -1122,10 +1124,13 @@
           нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
           независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости,
           из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
-          <span class="project__tooltip project__tooltip-one"></span> обеспечение нашей деятельности однозначно фиксирует необходимость
+          <span class="project__tooltip project__tooltip-one"></span> обеспечение нашей деятельности однозначно
+          фиксирует необходимость
           экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции
-          могут быть рассмотрены <span class="project__tooltip project__tooltip-two"></span> исключительно в&nbsp;разрезе маркетинговых
-          и&nbsp;финансовых <span  class="project__tooltip project__tooltip-three"></span> предпосылок. Банальные, но&nbsp;неопровержимые
+          могут быть рассмотрены <span class="project__tooltip project__tooltip-two"></span> исключительно
+          в&nbsp;разрезе маркетинговых
+          и&nbsp;финансовых <span class="project__tooltip project__tooltip-three"></span> предпосылок. Банальные,
+          но&nbsp;неопровержимые
           выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям,
           которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
           совершённой неузнаваемости. Подробнее: <a class="project__link" href="#">blanchard-art.ru/projects</a>
@@ -1157,7 +1162,6 @@
           </div>
         </div>
       </div>
-
     </section>
     <section class="connection">
       <div class="container connection__container">
@@ -1167,8 +1171,12 @@
             <address class="connection__street">Леонтьевский переулок, дом 5/1</address>
           </div>
           <form action="#" class="connection__form">
-            <input class="connection__data" type="text" placeholder="Имя*">
-            <input class="connection__data" type="tel" placeholder="телефон*">
+            <label class="connection__label">
+              <input class="connection__data" name="name" data-validate-field="name" type="text" placeholder="Имя*" pattern="[a-zA-Z]+">
+            </label>
+            <label class="connection__label">
+              <input class="connection__data" name="tel" data-validate-field="tel" type="tel" placeholder="телефон*">
+            </label>
             <button class="connection__btn" type="submit">Заказать обратный звонок</button>
           </form>
           <div class="connection__click">

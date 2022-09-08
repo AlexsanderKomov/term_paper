@@ -7,7 +7,6 @@ document.querySelectorAll('.menu__list').forEach(el => {
   });
 });
 
-
 // Выпадающий список в header
 
 let headerBottomItem = document.querySelectorAll('.header-bottom__item');
@@ -33,7 +32,6 @@ const swiper = new Swiper('.swiper', {
   loop: true,
 });
 
-
 // swiper in header
 
 const gallerySwiper = new Swiper('.gallery__swiper', {
@@ -54,7 +52,6 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
   }
 });
 
-
 // фильтр в галереи
 
 const element = document.querySelector('.gallery__select');
@@ -66,11 +63,9 @@ const choices = new Choices(element, {
   allowHTML: true,
 });
 
-
 // модальное окно в галерее
 
 const modal = new GraphModal();
-
 
 // свайпер в галереи
 
@@ -79,7 +74,6 @@ document.querySelector('.gallery__slide').addEventListener('click', (e) => {
 	new GraphModal().open(`[data-graph-target="${path}"]`);
 });
 
-
 // аккардион в каталоге
 
 $( "#accordion" ).accordion({
@@ -87,7 +81,6 @@ $( "#accordion" ).accordion({
   heightStyle: "content",
   collapsible: true
 });
-
 
 // табы в каталоге
 
@@ -105,7 +98,6 @@ catalogName.forEach((el) => {
   });
 });
 
-
 // свайпер в событиях
 
 const swiperDevelopment = new Swiper('.developments__swiper', {
@@ -121,7 +113,6 @@ const swiperDevelopment = new Swiper('.developments__swiper', {
 
 });
 
-
 // свайпер в проектах
 
 const swiperProject = new Swiper('.project__swiper', {
@@ -136,7 +127,6 @@ const swiperProject = new Swiper('.project__swiper', {
     prevEl: '.project__swiper-button-prev',
   },
 })
-
 
 // карта
 
@@ -199,4 +189,34 @@ tippy('.project__tooltip-three', {
   trigger: 'click',
 });
 
+// форма обратный звонок
 
+const telSelector = document.querySelector("input[type='tel']");
+const inputMask = new Inputmask("+7 (999) 999-99-99");
+const nameSelector = document.querySelector("input[name='name']");
+
+inputMask.mask(telSelector);
+
+new window.JustValidate('.connection__form', {
+  rules: {
+    tel: {
+      required: true,
+      function: () => {
+        const phone = telSelector.inputMask.unmaskedvalue();
+        return +phone && phone.length === 10;
+      }
+    }
+  },
+  messages: {
+    tel: {
+      required: 'Вы не ввели телефон',
+      function: 'Введите телефон из 10 символов не считая +7'
+    },
+    name: {
+      required: 'Вы не ввели имя',
+      minLength: 'Введите минимум 3 символа',
+      function: 'Недопустимый формат'
+    }
+  },
+  colorWrong: '#d11616'
+})

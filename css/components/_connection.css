@@ -39,6 +39,7 @@
 }
 
 .connection__data {
+  position: relative;
   padding: 7px 24px 9px;
   min-width: 270px;
   border: 1px solid var(--color-text);
@@ -71,9 +72,41 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
+  outline: 2px solid transparent;
+  background-color: transparent;
   color: var(--color-amethyst);
   transform: translate(-1px, -1px);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, outline-color .3s ease-in-out;
+}
 
+.connection__btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.connection__btn::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 100px;
+  outline: 2px solid transparent;
+  transition: outline-color .3s ease-in-out;
+}
+
+.connection__btn:active::after {
+  outline: none;
+}
+
+.connection__btn:active {
+  border-color: var(--color-vsv);
+  background-color: var(--color-active);
+}
+
+.connection__btn:focus::after {
+  outline-color: #c283f3;
 }
 
 .connection__click {
@@ -94,12 +127,25 @@
 .connection__link {
   display: inline-block;
   border: 1px solid transparent;
+  border-radius: 50%;
   width: 41px;
   height: 41px;
+  outline: none;
   background-color: #fff;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 41px;
   background-position: center;
+  transition: opacity .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.connection__link:focus,
+.connection__link:hover {
+  opacity: .5;
+}
+
+.connection__link:active {
+  opacity: 1;
+  border-color: var(--color-amethyst)
 }
 
 .connection__link-wa {
@@ -135,8 +181,18 @@
   line-height: 16px;
 }
 
-
-input:invalid {
-  border-color: #C72D34;
+.connection__label::after input:invalid {
+  top: 0;
+  border-color: #d11616;
 }
 
+.connection__label::after {
+  content: 'Недопустимый формат';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 110%;
+  font-size: 12px;
+  line-height: 16px;
+  color: #d11616;
+}

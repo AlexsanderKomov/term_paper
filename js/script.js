@@ -10,20 +10,38 @@ document.querySelectorAll('.menu__list').forEach(el => {
 // Выпадающий список в header
 
 let headerBottomItem = document.querySelectorAll('.header-bottom__item');
-let body = document.querySelector('.body');
 let menuList = document.querySelectorAll('.menu__list');
+const header = document.querySelector('.header__top')
+const hero = document.querySelector('.hero')
+
+header.addEventListener('click', () => {
+  removeClass()
+})
+
+hero.addEventListener('click', () => {
+  removeClass()
+})
 
 headerBottomItem.forEach(el => {
   el.addEventListener('click', () => {
-    const menuList = el.querySelector('.menu__list');
+    const menuListIn = el.querySelector('.menu__list');
 
-
-    el.classList.toggle('header-bottom__item-default');
-    el.classList.toggle('header-bottom__item-active');
-
-    menuList.classList.toggle('menu__list-visibility');
+    if (menuListIn.classList.contains('menu__list-visibility')) {
+      removeClass()
+    } else {
+      removeClass()
+      menuListIn.classList.add('menu__list-visibility')
+    }
   });
 });
+
+function removeClass() {
+  for (const menus of menuList) {
+    menus.className = 'menu__list';
+  }
+}
+
+// swiper in hero
 
 const swiper = new Swiper('.swiper', {
   autoplay: {
@@ -32,7 +50,7 @@ const swiper = new Swiper('.swiper', {
   loop: true,
 });
 
-// swiper in header
+// swiper in gallery
 
 const gallerySwiper = new Swiper('.gallery__swiper', {
   wrapperClass: 'gallery__wrapper',
@@ -197,26 +215,68 @@ const nameSelector = document.querySelector("input[name='name']");
 
 inputMask.mask(telSelector);
 
-new window.JustValidate('.connection__form', {
-  rules: {
-    tel: {
-      required: true,
-      function: () => {
-        const phone = telSelector.inputMask.unmaskedvalue();
-        return +phone && phone.length === 10;
-      }
-    }
-  },
-  messages: {
-    tel: {
-      required: 'Вы не ввели телефон',
-      function: 'Введите телефон из 10 символов не считая +7'
+  // new window.JustValidate('.connection__form', {
+
+  //   rules: {
+  //     tel: {
+  //       required: true,
+  //       function: () => {
+  //         const phone = telSelector.inputMask.unmaskedvalue();
+  //         return +phone && phone.length === 10;
+  //       }
+  //     },
+  //     name: {
+  //       rule: 'minLength',
+  //       value: 3,
+  //     }
+  //   },
+  //   messages: {
+  //     tel: {
+  //       required: 'Вы не ввели телефон',
+  //       function: 'Введите телефон из 10 символов не считая +7'
+  //     },
+  //     name: {
+  //       required: 'Вы не ввели имя',
+  //       minLength: 'Введите минимум 3 символа',
+  //     }
+  //   },
+  //   colorWrong: '#d11616'
+  // })
+
+
+const validation = new JustValidate('.connection__form')
+
+validation
+  .addField('nameSelector'), [
+    {
+      rule: 'minLength',
+      value: 3,
     },
-    name: {
-      required: 'Вы не ввели имя',
-      minLength: 'Введите минимум 3 символа',
-      function: 'Недопустимый формат'
+    {
+      rule: 'maxLength',
+      value: 15,
     }
-  },
-  colorWrong: '#d11616'
-})
+  ]
+
+// function validateForm(selector, rules) {
+//   new window.JustValidate(selector, {
+//     rules: rules
+//   })
+// }
+
+// validateForm('.connection__form', {
+//   tel: {
+//     required: true,
+//     function: () => {
+//       const phone = telSelector.inputMask.unmaskedvalue();
+//       return +phone && phone.length === 10;
+//     }
+//   },
+//   name: {
+//     required: true,
+//     function: () => {
+//       let myRe = /[a-zA-Z-а-яА-я]+/
+//       return (nameSelector.value.search(myRe) != -1)
+//     }
+//   }
+// })

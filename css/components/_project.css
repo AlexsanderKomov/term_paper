@@ -62,7 +62,27 @@
 }
 
 .project__link {
+  display: inline-block;
+  padding: 0 5px;
+  outline: none;
+  border-bottom: 1px solid transparent;
   color: var(--color-amethyst);
+  transform: translateX(-4px);
+  transition: border-color .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out   ;
+}
+
+.project__link:focus {
+  background-color: var(--color-amethyst);
+  color: var(--color-white);
+}
+
+.project__link:hover {
+  border-color: var(--color-amethyst);
+}
+
+.project__link:active {
+  border-color: var(--color-active);
+  color: var(--color-active);
 }
 
 .project__subtitle {

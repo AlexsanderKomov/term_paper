@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+.footer__link {
+  outline: none;
+}
+
 .footer__list {
   display: flex;
 }
@@ -26,16 +30,20 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  outline: none;
   transform: translateY(-3px);
 }
 
-.social__link-vk {
-  background-image: url(../../img/vkontakte.svg);
+path {
+  transition: fill .3s ease-in-out;
 }
 
-.social__link-ok {
-  background-image: url(../../img/ok.svg);
+.social__link:hover  svg path,
+.social__link:focus  svg path {
+  fill: var(--color-white);
 }
+
+.social__link:active  svg path {
+  fill: var(--color-amethyst);
+}
+

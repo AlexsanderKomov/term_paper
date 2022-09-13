@@ -1,5 +1,6 @@
 .header__container {
   position: relative;
+  padding: 0;
   max-width: 1920px;
 }
 
@@ -7,19 +8,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 128px 29px 145px;
+  padding: 28px 143px 29px 160px;
   background-color: var(--color-bl);
 }
 
 .header-bottom {
   position: absolute;
   top: 100%;
-  width: 1873px;
+  width: 100%;
   z-index: 200;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px 129px 22px 143px;
+  padding: 23px 145px 22px 158px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -287,6 +288,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: -1;
   background-color: transparent;
   transition: background-color .3s ease-in-out;
 }

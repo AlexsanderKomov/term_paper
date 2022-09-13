@@ -186,7 +186,7 @@
   border-color: #d11616;
 }
 
-.connection__label::after {
+/* .connection__label::after {
   content: 'Недопустимый формат';
   position: absolute;
   top: 0;
@@ -195,4 +195,4 @@
   font-size: 12px;
   line-height: 16px;
   color: #d11616;
-}
+} */

@@ -89,7 +89,7 @@ const modal = new GraphModal();
 
 document.querySelector('.gallery__slide').addEventListener('click', (e) => {
   let path = e.currentTarget.getAttribute('data-graph-path');
-	new GraphModal().open(`[data-graph-target="${path}"]`);
+  new GraphModal().open(`[data-graph-target="${path}"]`);
 });
 
 // аккардион в каталоге
@@ -208,75 +208,90 @@ tippy('.project__tooltip-three', {
 });
 
 // форма обратный звонок
+// pattern="[a-zA-Z-а-яА-я]+"
 
-const telSelector = document.querySelector("input[type='tel']");
+const form = document.querySelector('.form')
+const formInput = document.querySelector('.form-input');
+const formTel = document.querySelector('.form__tel');
 const inputMask = new Inputmask("+7 (999) 999-99-99");
-const nameSelector = document.querySelector("input[name='name']");
 
-inputMask.mask(telSelector);
+inputMask.mask(formTel);
 
-  // new window.JustValidate('.connection__form', {
+const validation = new JustValidate('#form', {
+  errorFieldCssClass: 'is-invalid',
+})
 
-  //   rules: {
-  //     tel: {
-  //       required: true,
-  //       function: () => {
-  //         const phone = telSelector.inputMask.unmaskedvalue();
-  //         return +phone && phone.length === 10;
-  //       }
-  //     },
-  //     name: {
-  //       rule: 'minLength',
-  //       value: 3,
-  //     }
-  //   },
-  //   messages: {
-  //     tel: {
-  //       required: 'Вы не ввели телефон',
-  //       function: 'Введите телефон из 10 символов не считая +7'
-  //     },
-  //     name: {
-  //       required: 'Вы не ввели имя',
-  //       minLength: 'Введите минимум 3 символа',
-  //     }
-  //   },
-  //   colorWrong: '#d11616'
-  // })
-
-
-const validation = new JustValidate('.connection__form')
-
-validation
-  .addField('nameSelector'), [
-    {
-      rule: 'minLength',
-      value: 3,
+validation.addField('#name', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательное поле'
+  },
+  {
+    validator: (value) => {
+      const re = /[a-zA-Zа-яА-я]/g;
+      return Boolean(!value.search(re))
     },
-    {
-      rule: 'maxLength',
-      value: 15,
-    }
-  ]
+    errorMessage: 'Недопустимый формат'
+  },
+  {
+    validator: (value) => {
+      return Boolean(value.length < 16)
+    },
+    errorMessage: 'Слишком длинное имя'
+  }
+])
+.addField('#tel', [
+  {
+    validator: (value) => {
+      const phone = formTel.inputmask.unmaskedvalue()
+      return Boolean(+phone && phone.length > 0)
+    },
+    errorMessage: 'Обязательное поле'
+  },
+  {
+    validator: (value) => {
+      const phone = formTel.inputmask.unmaskedvalue()
+      return Boolean(+phone && phone.length === 10)
+    },
+    errorMessage: 'Введите полный номер'
+  }
+])
 
-// function validateForm(selector, rules) {
-//   new window.JustValidate(selector, {
-//     rules: rules
-//   })
+// function validateImput() {
+//   if (formInput.contains('is-invalid')) {
+//     formInput.
+//   }
 // }
 
-// validateForm('.connection__form', {
-//   tel: {
-//     required: true,
-//     function: () => {
-//       const phone = telSelector.inputMask.unmaskedvalue();
-//       return +phone && phone.length === 10;
-//     }
-//   },
-//   name: {
-//     required: true,
-//     function: () => {
-//       let myRe = /[a-zA-Z-а-яА-я]+/
-//       return (nameSelector.value.search(myRe) != -1)
-//     }
-//   }
-// })
+
+// поиск header 1400px
+
+const headerOpen = document.querySelector('.header__btn-open')
+const headerClose = document.querySelector('.close')
+const headerWrapper = document.querySelector('.header-top__wrapper')
+
+headerOpen.addEventListener('click', () => {
+  headerWrapper.classList.add('header-top__wrapper-active')
+  headerOpen.classList.add('header__btn-opening')
+})
+
+headerClose.addEventListener('click', () =>{
+  headerWrapper.classList.remove('header-top__wrapper-active')
+  headerOpen.classList.remove('header__btn-opening')
+})
+
+
+// burger 1400 px
+const burger = document.querySelector('.burger')
+const hederList = document.querySelector('.header__list')
+const headerBtn = document.querySelector('.header__btn')
+const burgerLine = document.querySelectorAll('.burger__line')
+
+burger.addEventListener('click', () => {
+  for (let elem of burgerLine) {
+    elem.classList.toggle('burger__line-active')
+  }
+  burger.classList.toggle('burger-active')
+  hederList.classList.toggle('header__list-active')
+  headerBtn.classList.toggle('header__btn-active')
+})

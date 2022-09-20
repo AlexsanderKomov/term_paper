@@ -208,10 +208,7 @@ tippy('.project__tooltip-three', {
 });
 
 // форма обратный звонок
-// pattern="[a-zA-Z-а-яА-я]+"
 
-const form = document.querySelector('.form')
-const formInput = document.querySelector('.form-input');
 const formTel = document.querySelector('.form__tel');
 const inputMask = new Inputmask("+7 (999) 999-99-99");
 
@@ -257,27 +254,25 @@ validation.addField('#name', [
   }
 ])
 
-// function validateImput() {
-//   if (formInput.contains('is-invalid')) {
-//     formInput.
-//   }
-// }
-
-
 // поиск header 1400px
 
 const headerOpen = document.querySelector('.header__btn-open')
 const headerClose = document.querySelector('.close')
 const headerWrapper = document.querySelector('.header-top__wrapper')
+const headerLogo = document.querySelector('.header__logo')
 
 headerOpen.addEventListener('click', () => {
   headerWrapper.classList.add('header-top__wrapper-active')
   headerOpen.classList.add('header__btn-opening')
+  burger.classList.add('burger-none')
+  headerLogo.classList.add('header__logo-none')
 })
 
 headerClose.addEventListener('click', () =>{
   headerWrapper.classList.remove('header-top__wrapper-active')
   headerOpen.classList.remove('header__btn-opening')
+  burger.classList.remove('burger-none')
+  headerLogo.classList.remove('header__logo-none')
 })
 
 
@@ -294,4 +289,6 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('burger-active')
   hederList.classList.toggle('header__list-active')
   headerBtn.classList.toggle('header__btn-active')
+  document.body.classList.toggle('stop-scroll')
+
 })

@@ -31,6 +31,8 @@
   height: 28px;
   cursor: pointer;
   z-index: 310;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .burger__line {
@@ -66,6 +68,8 @@
   top: 1px;
   margin-right: clamp(3.125rem, -3.804rem + 10.83vw, 9.188rem);
   outline: none;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .header__list {
@@ -138,12 +142,9 @@
   background-repeat: no-repeat;
   background-size: 27px;
   background-position: center;
+  opacity: 1;
   transform: translateX(0);
-  transition: transform .33s ease-in-out;
-}
-
-.header__btn-opening {
-  transform: translateX(-928%);
+  transition: transform .33s ease-in-out, opacity .3s ease-in-out;
 }
 
 .header-top__wrapper {
@@ -155,10 +156,6 @@
   min-width: 315px;
   transform: translateY(-300%);
   transition: transform .3s ease-in-out;
-}
-
-.header-top__wrapper-active {
-  transform: translateY(-1px);
 }
 
 .header-top__form {

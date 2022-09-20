@@ -1,4 +1,8 @@
 @media (max-width: 1400px) {
+  .header__top {
+    padding-bottom: 27px;
+  }
+
   .burger-active {
     right: clamp(0rem, -5.617rem + 8.78vw, 2.063rem);
   }
@@ -27,6 +31,7 @@
 
   .header__logo {
     margin: 0;
+    transform: translateX(-2px);
   }
 
   .header__list {
@@ -40,10 +45,12 @@
     background-color: var(--color-bl);
     z-index: 300;
     transform: translateX(-100%);
-    transition: transform .3s ease-in-out;
+    opacity: 0;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
   }
 
   .header__list-active {
+    opacity: 1;
     transform: translateX(0);
   }
 
@@ -95,6 +102,33 @@
     overflow: hidden;
   }
 
+  .swiper {
+    top: -100px;
+  }
+
+  .swiper-slide-one {
+    background-image: url(../../img/hero-bg-1-1024.jpg);
+
+  }
+  .swiper-slide-two {
+    background-image: url(../../img/hero-bg-2-1024.jpg);
+  }
+
+  .swiper-slide-three {
+    background-image: url(../../img/hero-bg-3-1024.jpg);
+  }
+
+  .hero__wrapper {
+    width: 75%;
+  }
+
+  .hero__title {
+    margin-bottom: -9px;
+  }
+
+  .hero__descr {
+    margin-bottom: 132px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
@@ -125,12 +159,37 @@
     min-width: 100%;
   }
 
+  .header__btn-open {
+    background-size: 27px;
+    transform: translateX(2px);
+  }
+
+  .swiper-slide-one {
+    background-image: url(../../img/hero-bg-1-768.jpg);
+
+  }
+  .swiper-slide-two {
+    background-image: url(../../img/hero-bg-2-768.jpg);
+  }
+
+  .swiper-slide-three {
+    background-image: url(../../img/hero-bg-3-768.jpg);
+  }
+
+  .hero__wrapper {
+    width: 100%;
+  }
+
 }
 
-@media /* (min-width: 320px) and */ (max-width: 767.98px) {
+@media (max-width: 767.98px) {
   .header__top {
-    padding-right: clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
-    padding-left: clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
+    padding: clamp(0.688rem, -0.071rem + 3.79vw, 1.75rem) clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem) clamp(0.75rem, 0.036rem + 3.57vw, 1.75rem);
+  }
+
+
+  .header__logo {
+    transform: translateX(-4px);
   }
 
   .burger-none {
@@ -153,7 +212,7 @@
   .header-top__form {
     right: 0;
     width: 100%;
-    background-size: clamp(1.063rem, 0.616rem + 2.23vw, 1.688rem);
+    background-size: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
   }
 
   .header-top__search {
@@ -161,9 +220,10 @@
   }
 
   .header__btn-open {
-    width: clamp(1.063rem, 0.616rem + 2.23vw, 1.688rem);
-    height: clamp(1.063rem, 0.616rem + 2.23vw, 1.688rem);
-    background-size: clamp(1.063rem, 0.616rem + 2.23vw, 1.688rem);
+    transform: translateY(1px);
+    width: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
+    height: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
+    background-size: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
   }
 
   .header__logo {
@@ -243,5 +303,54 @@
     transform: translateX(0);
   }
 
+  .swiper {
+    top: -45px;
+    bottom: -15px;
+  }
 
+  .swiper-slide-one {
+    background-image: url(../../img/hero-bg-1-320.jpg);
+
+  }
+  .swiper-slide-two {
+    background-image: url(../../img/hero-bg-2-320.jpg);
+  }
+
+  .swiper-slide-three {
+    background-image: url(../../img/hero-bg-3-320.jpg);
+  }
+
+  .hero__container {
+    padding: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem) clamp(2.063rem, 1.304rem + 3.79vw, 3.125rem);
+  }
+
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero__title {
+    margin-bottom: 4px;
+    font-size: clamp(2rem, 0.214rem + 8.93vw, 4.5rem);
+    line-height: clamp(2.75rem, 0.339rem + 12.05vw, 6.125rem);
+    text-align: center;
+  }
+
+  .hero__descr {
+    width: 98%;
+    margin-bottom: 39px;
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
+    line-height: clamp(1rem, 0.375rem + 3.13vw, 1.875rem);
+    text-align: center;
+  }
+
+  .hero__btn {
+    padding: clamp(0.563rem, 0.071rem + 2.46vw, 1.25rem) clamp(1.125rem, 0.455rem + 3.35vw, 2.063rem) clamp(0.563rem, 0.116rem + 2.23vw, 1.188rem) clamp(0.875rem, 0.071rem + 4.02vw, 2rem);
+    font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
+    line-height: clamp(1rem, 0.598rem + 2.01vw, 1.563rem);
+  }
 }

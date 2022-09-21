@@ -129,6 +129,10 @@
   .hero__descr {
     margin-bottom: 132px;
   }
+
+  .about__descr {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
@@ -352,5 +356,22 @@
     padding: clamp(0.563rem, 0.071rem + 2.46vw, 1.25rem) clamp(1.125rem, 0.455rem + 3.35vw, 2.063rem) clamp(0.563rem, 0.116rem + 2.23vw, 1.188rem) clamp(0.875rem, 0.071rem + 4.02vw, 2rem);
     font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
     line-height: clamp(1rem, 0.598rem + 2.01vw, 1.563rem);
+  }
+
+  .about__container {
+    padding: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem) clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
+    padding-top: clamp(4.063rem, 3.393rem + 3.35vw, 5rem);
+
+  }
+
+  .about__title {
+    margin-bottom: 12px;
+    font-size: clamp(1.75rem, 0.857rem + 4.46vw, 3rem);
+    line-height: clamp(2.375rem, 1.17rem + 6.03vw, 4.063rem);
+  }
+
+  .about__descr {
+    font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
+    line-height: clamp(1.75rem, 1.571rem + 0.89vw, 2rem);
   }
 }

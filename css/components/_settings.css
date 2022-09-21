@@ -93,8 +93,8 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1630px;
+  padding: 0 clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
+  max-width: 1920px;
 }
 
 .title {

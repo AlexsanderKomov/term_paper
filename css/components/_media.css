@@ -1,3 +1,9 @@
+@media (max-width: 1700px) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1400px) {
   .header__top {
     padding-bottom: 27px;
@@ -133,9 +139,66 @@
   .about__descr {
     width: 100%;
   }
+
+  .swiper-button-prev {
+    left: 0;
+    top: -17%;
+  }
+
+  .swiper-button-next {
+    left: 101px;
+    top: -17%;
+  }
+
+  .swiper-pagination {
+    left: 44px;
+  }
+
+  .gallery {
+    padding-bottom: 121px;
+    background-image: url(../../img/gallery/gallery-bg-1024.jpg);
+  }
+
+  .catalog__left {
+    width: clamp(27.313rem, -25.964rem + 83.24vw, 46.875rem);
+  }
+
+  .catalog__right {
+    width: clamp(27.313rem, -34.475rem + 96.54vw, 50rem);
+  }
+
+  .catalog__descr {
+    width: 100%;
+  }
+
+  .catalog__list {
+    column-gap: 43px;
+  }
+
+  .catalog__description {
+    min-width: 200px;
+  }
+
+  .catalog__nothing {
+    width: 173px;
+    height: 114px;
+    margin-right: 33px;
+  }
+
+  .catalog__nothing::after {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+  }
+
+  .catalog__wrapper {
+    flex: 1;
+  }
+
 }
 
-@media (min-width: 768px) and (max-width: 1023.98px) {
+@media (max-width: 1023.98px) {
   .header-top__wrapper {
       width: clamp(41.75rem, -6.066rem + 99.62vw, 57.688rem);
   }
@@ -184,9 +247,94 @@
     width: 100%;
   }
 
+  .gallery {
+    padding-bottom: 165px;
+    background-image: url(../../img/gallery/gallery-bg-768.jpg);
+  }
+
+  .gallery__container {
+    flex-direction: column;
+  }
+
+  .gallery__swiper {
+    max-width: 668px;
+    height: 330px;
+  }
+
+  .choices {
+    margin-bottom: 47px;
+  }
+
+  .gallery__left {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .swiper-pagination {
+    top: -52px;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    top: -18%;
+  }
+
+  .graph-modal__container {
+    width: 668px;
+  }
+
+  .graph-modal__wrapper {
+    padding-right: 36px;
+    max-width: 368px;
+  }
+
+  .catalog__descr {
+    margin-bottom: 20px;
+  }
+
+  .catalog__tabs {
+    flex-direction: column-reverse;
+  }
+
+  .catalog__left {
+    margin: 0;
+    width: 100%;
+  }
+
+  .catalog__right {
+    margin-bottom: 45px;
+    width: 100%;
+  }
+
+  .tabs__img {
+    margin-bottom: 18px;
+  }
+
+  .tabs__time {
+    margin-bottom: 6px;
+  }
+
+  .catalog__list {
+    column-gap: clamp(1.688rem, -16.126rem + 37.11vw, 7.625rem);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalog__item {
+    width: 197px;
+  }
+
+  .catalog__description {
+    min-width: 270px;
+  }
+
+  .catalog__nothing {
+    width: 251px;
+    height: 165px;
+  }
+
 }
 
 @media (max-width: 767.98px) {
+
   .header__top {
     padding: clamp(0.688rem, -0.071rem + 3.79vw, 1.75rem) clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem) clamp(0.75rem, 0.036rem + 3.57vw, 1.75rem);
   }
@@ -374,4 +522,168 @@
     font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
     line-height: clamp(1.75rem, 1.571rem + 0.89vw, 2rem);
   }
+
+  .gallery {
+    position: relative;
+    top: 11px;
+    min-height: 800px;
+    padding: 0;
+  }
+
+  .gallery__container {
+    flex-direction: column;
+    padding: clamp(3.125rem, 1.786rem + 6.7vw, 5rem) clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
+  }
+
+  .gallery__left {
+    margin: 0;
+    margin-bottom: 36px;
+  }
+
+  .gallery__title {
+    margin-bottom: 12px;
+    font-size: clamp(1.75rem, 0.859rem + 4.45vw, 3rem);
+    line-height: clamp(2.375rem, 1.039rem + 6.68vw, 4.25rem);
+  }
+
+  .gallery__top  {
+    margin-bottom: 5px;
+  }
+
+  .choices {
+    margin-bottom: 37px;
+    width: 100%;
+  }
+
+  .graph-modal__content {
+    flex-direction: column;
+  }
+
+  .graph-modal__container  {
+    width: 290px;
+    max-height: 600px;
+  }
+
+  .graph-modal__img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .graph-modal__wrapper {
+    padding: 18px;
+  }
+
+  .graph-modal__years {
+    margin-bottom: 12px;
+  }
+
+  .gallery__rigth {
+    top: 0;
+  }
+
+  .gallery__swiper  {
+    height: 367px;
+  }
+
+  .gallery__slide {
+    height: 417px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    top: 105%;
+  }
+
+  .swiper-button-next {
+    left: clamp(11.25rem, 3.437rem + 39.06vw, 22.188rem);
+  }
+
+  .swiper-button-prev {
+    left: clamp(4.938rem, -2.92rem + 39.29vw, 15.938rem);
+  }
+
+  .swiper-pagination {
+    top: 107%;
+    left: clamp(7.688rem, -0.215rem + 39.51vw, 18.75rem);
+  }
+
+  .catalog {
+    padding-top: 20px;
+  }
+
+  .catalog__container {
+    padding: 41px clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
+  }
+
+  .catalog__date {
+    transform: translateY(0);
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .catalog__title {
+    margin-bottom: 12px;
+    font-size: clamp(1.75rem, 0.859rem + 4.45vw, 3rem);
+    line-height: clamp(2.375rem, 1.039rem + 6.68vw, 4.25rem);
+  }
+
+  .catalog__descr {
+    display: none;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    padding: clamp(1.25rem, 0.312rem + 4.69vw, 2.563rem) 0;
+    font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+  }
+
+  .ui-accordion-header::after {
+    top: 51%;
+    width: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
+    height: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
+    background-size: clamp(0.688rem, 0.464rem + 1.12vw, 1rem);
+    background-position: clamp(0.563rem, 0.205rem + 1.79vw, 1.063rem) clamp(0.813rem, 0.634rem + 0.89vw, 1.063rem);
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding: clamp(1.25rem, 1.027rem + 1.12vw, 1.563rem) 0;
+  }
+
+  .tabs__img {
+    margin-bottom: 16px;
+  }
+
+  .tabs__time {
+    margin-bottom: 13px;
+  }
+
+  .catalog__description {
+    min-width: 100%;
+  }
+
+  .catalog__content {
+    justify-content: space-between;
+  }
+
+  .catalog__nothing {
+    margin-right: 31px;
+    width: clamp(4.938rem, 1.098rem + 19.2vw, 10.313rem);
+    height: clamp(7.375rem, 1.437rem + 29.69vw, 15.688rem);
+    transform: translateX(6px);
+  }
+
+  .catalog__nothing::after {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+  }
+
+  .catalog__subtitle {
+    font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+  }
+
+
+
 }

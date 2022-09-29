@@ -55,8 +55,6 @@ const swiper = new Swiper('.swiper', {
 const gallerySwiper = new Swiper('.gallery__swiper', {
   wrapperClass: 'gallery__wrapper',
   slideClass: 'gallery__slide',
-  slidesPerView: 3,
-  spaceBetween: 50,
   calculateHeight:true,
   slidesPerGroup: 3,
   navigation: {
@@ -67,19 +65,36 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
     el: '.swiper-pagination',
     type: 'fraction',
     clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 38,
+      slidesPerGroup: 2
+    },
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3
+    }
+
   }
 });
 
 // фильтр в галереи
 
-// const element = document.querySelector('.gallery__select');
+const element = document.querySelector('.gallery__select');
 
-// const choices = new Choices(element, {
-//   searchEnabled: false,
-//   itemSelectText: '',
-//   shouldSort: false,
-//   allowHTML: true,
-// });
+const choices = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: '',
+  shouldSort: false,
+  allowHTML: true,
+});
 
 // модальное окно в галерее
 
@@ -87,10 +102,10 @@ const modal = new GraphModal();
 
 // свайпер в галереи
 
-// document.querySelector('.gallery__slide').addEventListener('click', (e) => {
-//   let path = e.currentTarget.getAttribute('data-graph-path');
-//   new GraphModal().open(`[data-graph-target="${path}"]`);
-// });
+document.querySelector('.gallery__slide').addEventListener('click', (e) => {
+  let path = e.currentTarget.getAttribute('data-graph-path');
+  new GraphModal().open(`[data-graph-target="${path}"]`);
+});
 
 // аккардион в каталоге
 

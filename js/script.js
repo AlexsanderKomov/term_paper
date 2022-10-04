@@ -138,11 +138,36 @@ const swiperDevelopment = new Swiper('.developments__swiper', {
   slideClass: 'developments__swiper-slide',
   slidesPerView: 3,
   slidesPerGroup: 1,
-  spaceBetween: 50,
   navigation: {
     nextEl: '.developments__swiper-button-next',
     prevEl: '.developments__swiper-button-prev',
   },
+  pagination: {
+    el: '.developments__swiper-pagination',
+    type: 'bullets',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    576: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34
+    },
+    769: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 27
+    },
+    1400: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+      spaceBetween: 50
+    }
+
+  }
 
 });
 
@@ -159,6 +184,28 @@ const swiperProject = new Swiper('.project__swiper', {
     nextEl: '.project__swiper-button-next',
     prevEl: '.project__swiper-button-prev',
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 34
+    },
+    1024: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    },
+    1400: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    }
+  }
 })
 
 // карта

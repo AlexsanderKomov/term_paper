@@ -7,8 +7,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-left: 23px;
-  padding-right: 23px;
 }
 
 .project__title {
@@ -91,9 +89,8 @@
 
 .project__swiper {
   align-self: center;
-  padding-left: 19px;
-  width: 1470px;
-  height: 150px;
+  width: clamp(51.125rem, 5.982rem + 70.54vw, 90.625rem);
+  height: clamp(8rem, 6.429rem + 2.46vw, 9.375rem);
   overflow: hidden;
 }
 
@@ -128,100 +125,55 @@
   filter: saturate(1) grayscale(0);
 }
 
-.project__slide-one {
-  background-size: 244px 63px;
-  /* background-image: url(../../img/project/project-1.svg); */
+.project__img-one {
+  width: clamp(13.125rem, 10.696rem + 3.79vw, 15.25rem);
+  height: clamp(3.25rem, 2.464rem + 1.23vw, 3.938rem);
 }
 
-.project__slide-one:hover,
-.project__slide-one:active {
-  /* background-image: url(../../img/project/project-1-hov.svg); */
+.project__img-two {
+  width: clamp(17.688rem, 14.33rem + 5.25vw, 20.625rem);
+  height: clamp(3.063rem, 2.348rem + 1.12vw, 3.688rem);
 }
 
-.project__slide-two {
-  background-size: 330px 59px;
-  /* background-image: url(../../img/project/project-2.svg); */
+.project__img-three {
+  width: 229px;
+  height: 54px;
 }
 
-.project__slide-two:hover,
-.project__slide-two:active {
-  /* background-image: url(../../img/project/project-2-hov.svg); */
+.project__img-four {
+  width: clamp(6.563rem, 5.277rem + 2.01vw, 7.688rem);
+  height: clamp(4.563rem, 3.705rem + 1.34vw, 5.313rem);
 }
 
-.project__slide-three {
-  background-size: 229px 54px;
-  /* background-image: url(../../img/project/project-3.svg); */
+.project__img-five {
+  width: clamp(9.25rem, 7.464rem + 2.79vw, 10.813rem);
+  height: clamp(4.563rem, 3.705rem + 1.34vw, 5.313rem);
 }
 
-.project__slide-three:hover,
-.project__slide-three:active {
-  /* background-image: url(../../img/project/project-3-hov.svg); */
+.project__img-six {
+  width: clamp(13.438rem, 10.795rem + 4.13vw, 15.75rem);
+  height: clamp(3.75rem, 3.036rem + 1.12vw, 4.375rem);
 }
 
-.project__slide-four {
-  background-size: 123px 85px;
-  /* background-image: url(../../img/project/project-4.svg); */
+.project__img-seven {
+  width: clamp(15.25rem, 12.25rem + 4.69vw, 17.875rem);
+  height: clamp(3.688rem, 2.973rem + 1.12vw, 4.313rem);
 }
 
-.project__slide-four:hover,
-.project__slide-four:active {
-  /* background-image: url(../../img/project/project-4-hov.svg); */
+.project__img-eight {
+  width: clamp(9.875rem, 7.946rem + 3.01vw, 11.563rem);
+  height: clamp(4.313rem, 3.455rem + 1.34vw, 5.063rem);
 }
 
-.project__slide-five {
-  background-size: 173px 85px;
-  /* background-image: url(../../img/project/project-5.svg); */
-}
-
-.project__slide-five:hover,
-.project__slide-five:active {
-  /* background-image: url(../../img/project/project-5-hov.svg); */
-}
-
-.project__slide-six {
-  background-size: 252px 70px;
-  /* background-image: url(../../img/project/project-6.svg); */
-}
-
-.project__slide-six:hover,
-.project__slide-six:active {
-  /* background-image: url(../../img/project/project-6-hov.svg); */
-}
-
-.project__slide-seven {
-  background-size: 286px 69px;
-  /* background-image: url(../../img/project/project-7.svg); */
-}
-
-.project__slide-seven:hover,
-.project__slide-seven:active {
-  /* background-image: url(../../img/project/project-7-hov.svg); */
-}
-
-.project__slide-eight {
-  background-size: 185px 81px;
-  /* background-image: url(../../img/project/project-8.svg); */
-}
-
-.project__slide-eight:hover,
-.project__slide-eight:active {
-  /* background-image: url(../../img/project/project-8-hov.svg); */
-}
-
-.project__slide-nine {
-  background-size: 229px 62px;
-  /* background-image: url(../../img/project/project-9.svg); */
-}
-
-.project__slide-nine:hover,
-.project__slide-nine:active {
-  /* background-image: url(../../img/project/project-9-hov.svg); */
+.project__img-nine {
+  width: clamp(12.25rem, 9.893rem + 3.68vw, 14.313rem);
+  height: clamp(3.313rem, 2.67rem + 1vw, 3.875rem);
 }
 
 .project__swiper-button-next,
 .project__swiper-button-prev {
   position: absolute;
-  top: 84%;
+  bottom: 61px;
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -252,7 +204,7 @@
 }
 
 .project__swiper-button-next {
-  right: 7px;
+  right: clamp(3.125rem, -4.732rem + 12.28vw, 10rem);
   transform: rotate(180deg);
 }
 

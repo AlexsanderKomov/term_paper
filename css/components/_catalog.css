@@ -167,10 +167,11 @@
 }
 
 .catalog__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   column-gap: 61px;
-  min-height: 288px;
+  height: 288px;
 }
 
 .catalog__item {

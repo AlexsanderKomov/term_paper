@@ -1,5 +1,5 @@
 .footer {
-  padding: 50px 143px 45px 160px;
+  padding: 50px 160px 45px;
   background-color: var(--color-bl);
 }
 
@@ -15,11 +15,6 @@
 
 .footer__list {
   display: flex;
-}
-
-.footer__item {
-  width: 45px;
-  height: 45px;
 }
 
 .footer__item:not(:last-child) {

@@ -44,7 +44,7 @@
   height: 3.65px;
   background-color: var(--color-white);
   transform: translateY(-50%);
-  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, top .3s ease-in-out;
 }
 
 .burger__line:first-child {

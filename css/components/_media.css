@@ -16,7 +16,19 @@
     display: block;
   }
 
+  .connection__container {
+    flex-direction: column;
+    align-items: start;
+    padding-top: 44px;
+  }
 
+  .connection__address {
+    margin-bottom: 27px;
+  }
+
+  .connection__form {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -236,6 +248,37 @@
   .project__swiper-button-prev {
     bottom: clamp(3rem, 2.071rem + 1.45vw, 3.813rem);
   }
+
+  .connection {
+    margin-bottom: 3px;
+  }
+
+  .connection__street {
+    font-size: clamp(0.875rem, 0.148rem + 1.14vw, 1rem);
+    transform: translateY(4px);
+  }
+
+  .connection__label {
+    min-width: 270px;
+  }
+
+  .connection__btn {
+    padding: 12.5px 40.5px;
+    padding-bottom: 9px;
+    transform: translate(0, 0);
+  }
+
+  .footer {
+    padding-right: clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
+    padding-left: clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
+    padding-bottom: 28px;
+  }
+
+  .social__link {
+    width: 60px;
+    height: 60px;
+    transform: translateY(-8px);
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -263,7 +306,8 @@
   }
 
   .header-top__search {
-    min-width: 100%;
+    min-width: clamp(36.25rem, -10.629rem + 97.66vw, 51.875rem);
+    transform: translateX(10px);
   }
 
   .header__btn-open {
@@ -445,6 +489,21 @@
     bottom: clamp(2.375rem, 1.661rem + 1.12vw, 3rem);
   }
 
+  .connection__form {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .connection__label {
+    flex: 1 1;
+    margin: 0;
+  }
+
+  .connection__btn {
+    padding: 10.5px 27.5px;
+    min-width: clamp(19.813rem, 18.687rem + 2.34vw, 20.188rem);
+  }
+
 }
 
 @media (max-width: 767.98px) {
@@ -481,15 +540,20 @@
     background-size: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
   }
 
-  .header-top__search {
-    min-width: 100%;
-  }
-
   .header__btn-open {
     transform: translateY(1px);
     width: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
     height: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
     background-size: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
+  }
+
+  .header-top__close {
+    left: clamp(-22.438rem, -38.465rem + 80.14vw, 0rem);
+  }
+
+  .header-top__search {
+    min-width: clamp(14.375rem, -1.251rem + 78.13vw, 36.25rem);
+    transform: translateX(0);
   }
 
   .header__logo {
@@ -513,6 +577,10 @@
 
   .burger__line:last-child {
     width: clamp(0.625rem, 3.13vw, 1.5rem);
+  }
+
+  .burger-active {
+    top: 16px;
   }
 
   .burger__line-active {
@@ -835,6 +903,7 @@
 
   .project {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .project__container {
@@ -915,5 +984,81 @@
   .project__swiper-button-next,
   .project__swiper-button-prev {
     bottom: clamp(4.25rem, 3.357rem + 4.46vw, 5.5rem);
+  }
+
+  .connection__container {
+    padding: 0 clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
+  }
+
+  .connection__address {
+    margin-bottom: 23px;
+  }
+
+  .connection__dot {
+    font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+    line-height: clamp(1.563rem, 1.25rem + 1.56vw, 2rem);
+  }
+
+  .connection__street {
+    line-height: clamp(1.188rem, 0.607rem + 2.9vw, 2rem);
+  }
+
+  .connection__data {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-width: 290px;
+  }
+
+  .connection__form {
+    gap: 18px;
+    margin-bottom: clamp(1.063rem, 0.482rem + 2.9vw, 1.875rem);
+  }
+
+  .connection__btn {
+    display: none;
+  }
+
+  .connection__btn-two {
+    display: block;
+  }
+
+  .connection__social {
+    transform: translate(3px, 2px);
+  }
+
+  .connection__connect {
+    font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+  }
+
+  .connection__link {
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+  }
+
+  .map,
+  .map__wrapper {
+    height: clamp(20rem, 3.035rem + 84.83vw, 43.75rem);
+  }
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 33px;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  .social__link {
+    width: clamp(3.125rem, 2.679rem + 2.23vw, 3.75rem);
+    height: clamp(3.125rem, 2.679rem + 2.23vw, 3.75rem);
+    transform: translateY(0);
+  }
+
+  .footer__link {
+    width: clamp(6.063rem, 2.669rem + 16.97vw, 10.813rem);
   }
 }

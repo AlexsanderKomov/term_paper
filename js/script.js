@@ -102,7 +102,7 @@ const modal = new GraphModal();
 
 // свайпер в галереи
 
-document.querySelector('.gallery__slide').addEventListener('click', (e) => {
+document.querySelector('.gallery__slide').addEventListener('click', () => {
   let path = e.currentTarget.getAttribute('data-graph-path');
   new GraphModal().open(`[data-graph-target="${path}"]`);
 });
@@ -210,35 +210,35 @@ const swiperProject = new Swiper('.project__swiper', {
 
 // карта
 
-// let center = [55.75846806898367,37.60108849999989];
+let center = [55.75846806898367,37.60108849999989];
 
-// ymaps.ready(init);
+ymaps.ready(init);
 
-//     function init(){
-//         // Создание карты.
-//         let myMap = new ymaps.Map("map", {
-//             center: center,
-//             zoom: 16
-//         });
+    function init(){
+        // Создание карты.
+        let myMap = new ymaps.Map("map", {
+            center: center,
+            zoom: 16
+        });
 
-//         let myPlacemark = new ymaps.Placemark(center, {}, {
-//           iconLayout: 'default#image',
-//           iconImageHref: '../img/map.svg',
-//           iconImageSize: [20, 20],
-//           iconImageOffset: [-4, -10]
-//         });
+        let myPlacemark = new ymaps.Placemark(center, {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '../img/map.svg',
+          iconImageSize: [20, 20],
+          iconImageOffset: [-4, -10]
+        });
 
-//         // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
-//         myMap.controls.remove('searchControl'); // удаляем поиск
-//         myMap.controls.remove('trafficControl'); // удаляем контроль трафика
-//         myMap.controls.remove('typeSelector'); // удаляем тип
-//         myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-//         // myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
-//         myMap.controls.remove('rulerControl'); // удаляем контрол правил
-//         myMap.behaviors.disable(['scrollZoom']);
+        // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+        myMap.controls.remove('searchControl'); // удаляем поиск
+        myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+        myMap.controls.remove('typeSelector'); // удаляем тип
+        myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+        // myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+        myMap.controls.remove('rulerControl'); // удаляем контрол правил
+        myMap.behaviors.disable(['scrollZoom']);
 
-//         myMap.geoObjects.add(myPlacemark);
-//     }
+        myMap.geoObjects.add(myPlacemark);
+    }
 
 // tooltip
 
@@ -271,50 +271,56 @@ tippy('.project__tooltip-three', {
 
 // форма обратный звонок
 
-// const formTel = document.querySelector('.form__tel');
-// const inputMask = new Inputmask("+7 (999) 999-99-99");
+const formTel = document.querySelector('.form__tel');
+const inputMask = new Inputmask("+7 (999) 999-99-99");
 
-// inputMask.mask(formTel);
+inputMask.mask(formTel);
 
-// const validation = new JustValidate('#form', {
-//   errorFieldCssClass: 'is-invalid',
-// })
+const validation = new JustValidate('#form', {
+  errorFieldCssClass: 'is-invalid',
+})
 
-// validation.addField('#name', [
-//   {
-//     rule: 'required',
-//     errorMessage: 'Обязательное поле'
-//   },
-//   {
-//     validator: (value) => {
-//       const re = /[a-zA-Zа-яА-я]/g;
-//       return Boolean(!value.search(re))
-//     },
-//     errorMessage: 'Недопустимый формат'
-//   },
-//   {
-//     validator: (value) => {
-//       return Boolean(value.length < 16)
-//     },
-//     errorMessage: 'Слишком длинное имя'
-//   }
-// ])
-// .addField('#tel', [
-//   {
-//     validator: (value) => {
-//       const phone = formTel.inputmask.unmaskedvalue()
-//       return Boolean(+phone && phone.length > 0)
-//     },
-//     errorMessage: 'Обязательное поле'
-//   },
-//   {
-//     validator: (value) => {
-//       const phone = formTel.inputmask.unmaskedvalue()
-//       return Boolean(+phone && phone.length === 10)
-//     },
-//     errorMessage: 'Введите полный номер'
-//   }
-// ])
+validation.addField('#name', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательное поле'
+  },
+  {
+    validator: (value) => {
+      const re = /[a-zA-Zа-яА-я]/g;
+      return Boolean(!value.search(re))
+    },
+    errorMessage: 'Недопустимый формат'
+  },
+  {
+    validator: (value) => {
+      return Boolean(value.length < 16)
+    },
+    errorMessage: 'Слишком длинное имя'
+  },
+  {
+    validator: (value) => {
+      return Boolean(value.length > 2)
+    },
+    errorMessage: 'Слишком короткое имя'
+  }
+])
+.addField('#tel', [
+  {
+    validator: (value) => {
+      const phone = formTel.inputmask.unmaskedvalue()
+      return Boolean(+phone && phone.length > 0)
+    },
+    errorMessage: 'Обязательное поле'
+  },
+  {
+    validator: (value) => {
+      const phone = formTel.inputmask.unmaskedvalue()
+      return Boolean(+phone && phone.length === 10)
+    },
+    errorMessage: 'Введите полный номер'
+  }
+])
 
 // поиск header 1400px
 

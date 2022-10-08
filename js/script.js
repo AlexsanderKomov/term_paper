@@ -144,6 +144,7 @@ const swiperDevelopment = new Swiper('.developments__swiper', {
   },
   pagination: {
     el: '.developments__swiper-pagination',
+    clickable: true,
     type: 'bullets',
   },
   breakpoints: {

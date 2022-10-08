@@ -136,6 +136,7 @@
 }
 
 .header__btn-open {
+  position: relative;
   display: none;
   width: 30px;
   height: 30px;
@@ -161,8 +162,8 @@
 .header-top__form {
   position: relative;
   top: 1px;
-  right: -8px;
-  padding-left: 39px;
+  flex: 1;
+  padding-left: 42px;
   height: 30px;
   width: 30px;
   line-height: 25px;

@@ -1,28 +1,38 @@
+.header {
+  background-color: var(--color-bl);
+  z-index: 300;
+}
+
 .header__container {
   position: relative;
-  padding: 0;
-  max-width: 1920px;
   z-index: 300;
+  background-color: var(--color-bl);
 }
 
 .header__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px clamp(3.125rem, -3.518rem + 10.38vw, 8.938rem) 29px clamp(3.125rem, -4.732rem + 12.28vw, 10rem);
-  background-color: var(--color-bl);
+  padding-top: 28px;
+  padding-bottom: 29px;
+}
+
+.header-bottom__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  z-index: 200;
 }
 
 .header-bottom {
   position: absolute;
   top: 100%;
-  width: 100%;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 23px clamp(3.125rem, -3.661rem + 10.6vw, 9.063rem) 22px clamp(3.125rem, -4.589rem + 12.05vw, 9.875rem);
+  width: calc(100% - var(--padding-cont) * 2);
+  height: 70px;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
 }
 
 .burger {
@@ -108,8 +118,7 @@
 .header__btn {
   position: relative;
   top: 3px;
-  left: -10px;
-  padding: 2px 6px 8px 28px;
+  padding: 2px 0 8px 28px;
   outline: none;
   font-size: 18px;
   line-height: 25px;
@@ -282,8 +291,7 @@
 .header-bottom__form {
   position: relative;
   top: 1px;
-  right: 9px;
-  padding-left: 39px;
+  padding-left: 33px;
   font-size: 18px;
   line-height: 25px;
   outline: none;
@@ -297,7 +305,6 @@
 
 .header-bottom__search {
   position: relative;
-  right: 7px;
   display: inline-block;
   padding: 0;
   padding-bottom: 1px;

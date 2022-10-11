@@ -32,6 +32,10 @@
 }
 
 @media (max-width: 1400px) {
+  .container {
+    padding: 0 50px;
+  }
+
   .header__top {
     padding-bottom: 27px;
   }
@@ -121,6 +125,8 @@
 
   .header__btn-open {
     display: inline-block;
+    background-size: 27px;
+    transform: translate(2px, -1px);
   }
 
   .header-top__wrapper {
@@ -135,8 +141,12 @@
     overflow: hidden;
   }
 
+  .hero {
+    margin-bottom: 80px;
+  }
+
   .swiper {
-    top: -100px;
+    height: 768px;
   }
 
   .swiper-slide-one {
@@ -161,6 +171,10 @@
 
   .hero__descr {
     margin-bottom: 132px;
+  }
+
+  .about {
+    margin-bottom: 70px;
   }
 
   .about__descr {
@@ -219,6 +233,14 @@
     flex: 1;
   }
 
+  .tabs__subtitle {
+    margin-bottom: 7px;
+  }
+
+  .developments {
+    margin-bottom: 50px;
+  }
+
   .developments__wrapper {
     padding-bottom: 29px;
     padding-right: clamp(2.125rem, -0.598rem + 4.26vw, 3.125rem);
@@ -231,12 +253,22 @@
     text-align: right;
   }
 
-  .development__picture {
+  .developments__picture {
     margin-bottom: 17px;
   }
 
   .developments__subtitle {
     margin-bottom: 7px;
+  }
+
+  .project {
+    margin-bottom: 123px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .project__container {
+    padding-top: 30px;
   }
 
   .project__descr {
@@ -250,7 +282,7 @@
   }
 
   .connection {
-    margin-bottom: 3px;
+    margin-bottom: 38px;
   }
 
   .connection__street {
@@ -269,10 +301,12 @@
   }
 
   .footer {
-    padding-right: clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
-    padding-left: clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 28px;
   }
+
+
 
   .social__link {
     width: 60px;
@@ -365,7 +399,8 @@
   }
 
   .catalog {
-    padding-bottom: 80px;
+    padding-bottom: 0;
+    margin-bottom: 78px;
   }
 
   .catalog__descr {
@@ -485,11 +520,16 @@
   .connection__form {
     flex-wrap: wrap;
     gap: 12px;
+    column-gap: 21px;
   }
 
   .connection__label {
     flex: 1 1;
     margin: 0;
+  }
+
+  .connection__data {
+    min-width: 100%;
   }
 
   .connection__btn {
@@ -501,13 +541,13 @@
 
 @media (max-width: 767.98px) {
 
-  .header__top {
-    padding: clamp(0.688rem, -0.071rem + 3.79vw, 1.75rem) clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem) clamp(0.75rem, 0.036rem + 3.57vw, 1.75rem);
+  .container {
+    padding: 0 clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
   }
 
-
-  .header__logo {
-    transform: translateX(-4px);
+  .header__top {
+    padding-top: clamp(0.688rem, -0.071rem + 3.79vw, 1.75rem);
+    padding-bottom: clamp(0.75rem, 0.036rem + 3.57vw, 1.75rem);
   }
 
   .burger-none {
@@ -536,7 +576,6 @@
   }
 
   .header__btn-open {
-    transform: translateY(1px);
     width: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
     height: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
     background-size: clamp(1.188rem, 0.696rem + 2.46vw, 1.875rem);
@@ -628,9 +667,12 @@
     transform: translateX(0);
   }
 
+  .hero {
+    margin-bottom: 0;
+  }
+
   .swiper {
-    top: -45px;
-    bottom: -15px;
+    height: clamp(22.188rem, 3.749rem + 92.19vw, 48rem);
   }
 
   .swiper-slide-one {
@@ -654,6 +696,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
     width: 100%;
   }
 
@@ -677,6 +721,10 @@
     padding: clamp(0.563rem, 0.071rem + 2.46vw, 1.25rem) clamp(1.125rem, 0.455rem + 3.35vw, 2.063rem) clamp(0.563rem, 0.116rem + 2.23vw, 1.188rem) clamp(0.875rem, 0.071rem + 4.02vw, 2rem);
     font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
     line-height: clamp(1rem, 0.598rem + 2.01vw, 1.563rem);
+  }
+
+  .about {
+    margin-bottom: 0;
   }
 
   .about__container {
@@ -781,13 +829,14 @@
   }
 
   .catalog {
+    margin-bottom: 0;
     padding-top: 20px;
     padding-bottom: 0;
   }
 
   .catalog__container {
     padding: 41px clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
-    padding-bottom: 50px;
+    padding-bottom: 48px;
   }
 
   .catalog__date {
@@ -893,6 +942,7 @@
   }
 
   .project {
+    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -977,6 +1027,10 @@
     bottom: clamp(4.25rem, 3.357rem + 4.46vw, 5.5rem);
   }
 
+  .connection {
+    margin-bottom: 19px;
+  }
+
   .connection__container {
     padding: 0 clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
   }
@@ -1014,7 +1068,7 @@
   }
 
   .connection__social {
-    transform: translate(3px, 2px);
+    transform: translate(0, 2px);
   }
 
   .connection__connect {

@@ -219,14 +219,14 @@ ymaps.ready(init);
         // Создание карты.
         let myMap = new ymaps.Map("map", {
             center: center,
-            zoom: 16
+            zoom: 15
         });
 
         let myPlacemark = new ymaps.Placemark(center, {}, {
           iconLayout: 'default#image',
           iconImageHref: '../img/map.svg',
           iconImageSize: [20, 20],
-          iconImageOffset: [-4, -10]
+          iconImageOffset: [0, -10]
         });
 
         // myMap.controls.remove('geolocationControl'); // удаляем геолокацию

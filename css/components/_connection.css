@@ -24,11 +24,11 @@
 .connection__form {
   display: flex;
   align-items: center;
+  column-gap: 20px;
 }
 
  .connection__label {
   position: relative;
-  margin-right: 20px;
 }
 
 .connection__data {
@@ -134,7 +134,6 @@
   font-size: 24px;
   line-height: 32px;
   color: var(--color-text);
-  transform: translateX(-2px);
 }
 
 .connection__link {

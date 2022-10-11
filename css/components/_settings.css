@@ -62,6 +62,7 @@ body {
 }
 
 :root {
+  --padding-cont: 15px;
   --color-amethyst: #9d5cd0;
   --color-text: #333;
   --color-white: #fff;
@@ -93,8 +94,8 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 clamp(3.125rem, -4.804rem + 12.39vw, 10.063rem);
-  max-width: 1920px;
+  padding: 0 var(--padding-cont);
+  max-width: 1630px;
 }
 
 .title {

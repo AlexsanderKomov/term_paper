@@ -350,6 +350,7 @@ const burger = document.querySelector('.burger')
 const hederList = document.querySelector('.header__list')
 const headerBtn = document.querySelector('.header__btn')
 const burgerLine = document.querySelectorAll('.burger__line')
+const heroWrap = document.querySelector('.hero__wrapper')
 
 burger.addEventListener('click', () => {
   for (let elem of burgerLine) {
@@ -359,5 +360,5 @@ burger.addEventListener('click', () => {
   hederList.classList.toggle('header__list-active')
   headerBtn.classList.toggle('header__btn-active')
   document.body.classList.toggle('stop-scroll')
-
+  heroWrap.classList.toggle('hero__wrapper-active')
 })

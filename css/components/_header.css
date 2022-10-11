@@ -1,6 +1,7 @@
 .header {
+  position: relative;
   background-color: var(--color-bl);
-  z-index: 300;
+  z-index: 2;
 }
 
 .header__container {
@@ -18,6 +19,7 @@
 }
 
 .header-bottom__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

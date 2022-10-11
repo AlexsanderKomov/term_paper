@@ -145,6 +145,10 @@
     margin-bottom: 80px;
   }
 
+  .hero__wrapper-active {
+    opacity: 0;
+  }
+
   .swiper {
     height: 768px;
   }

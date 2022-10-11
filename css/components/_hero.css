@@ -8,8 +8,9 @@
   width: 35%;
   padding-top: clamp(6.563rem, 4.563rem + 3.13vw, 8.313rem);
   padding-bottom: clamp(7.125rem, 6.554rem + 0.89vw, 7.625rem);
-  z-index: 100;
+  z-index: 2;
   pointer-events: none;
+  transition: opacity .3s ease-in-out;
 }
 
 .hero__title {

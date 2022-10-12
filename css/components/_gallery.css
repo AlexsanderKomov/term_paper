@@ -47,6 +47,7 @@
   color: var(--color-white);
 }
 
+
 /* choices */
 
 .choices {
@@ -54,7 +55,7 @@
   margin-bottom: clamp(7rem, 1.929rem + 7.92vw, 11.438rem);
 }
 
-.choices__inner  {
+.choices__inner {
   padding: 0;
   min-height: 40px;
   border-radius: 6px;
@@ -85,7 +86,8 @@
   transition: opacity .3s ease-in-out, background-color .3s ease-in-out;
 }
 
-.choices__list--dropdown .choices__item--selectable.is-highlighted:hover , .choices__list[aria-expanded] .choices__item--selectable.is-highlighted:hover {
+.choices__list--dropdown .choices__item--selectable.is-highlighted:hover,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted:hover {
   opacity: 1;
   color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.2);
@@ -106,7 +108,7 @@
   right: 14px;
   width: 12px;
   height: 7px;
-  border:  none;
+  border: none;
   background-image: url(../../img/header/header-check-mark.svg);
 }
 
@@ -120,7 +122,8 @@
   padding: 0;
 }
 
-.choices__list--dropdown, .choices__list[aria-expanded] {
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
   border-radius: 6px;
   background-color: transparent;
   color: var(--color-white);
@@ -129,6 +132,7 @@
 .choices__list .is-selected {
   display: none;
 }
+
 
 /* century */
 
@@ -173,20 +177,21 @@
   border-color: var(--color-hover);
 }
 
-.century__label:focus .century__check, .century__label:focus .century__label {
+.century__label:focus .century__check,
+.century__label:focus .century__label {
   color: var(--color-hover);
   border-color: var(--color-hover);
 }
 
 .century__label:active,
 .century__label:active .century__label,
-.century__label:active .century__input + .century__check::before {
+.century__label:active .century__input+.century__check::before {
   color: var(--color-hover);
   border-color: var(--color-hover);
   opacity: 1;
 }
 
-.century__input + .century__check::before {
+.century__input+.century__check::before {
   content: "";
   position: absolute;
   top: 30%;
@@ -199,11 +204,12 @@
   transition: opacity .3s ease-in-out;
 }
 
-.century__input:checked + .century__check::before,
-.century__input:checked + .century__check {
+.century__input:checked+.century__check::before,
+.century__input:checked+.century__check {
   border-color: var(--color-hover);
   opacity: 1;
 }
+
 
 /* swiper */
 
@@ -363,6 +369,7 @@
   color: var(--color-white);
 }
 
+
 /* modal */
 
 .graph-modal {
@@ -474,6 +481,6 @@
 }
 
 .graph-modal__close:active::before,
-.graph-modal__close:active::after  {
+.graph-modal__close:active::after {
   background-color: var(--color-active);
 }

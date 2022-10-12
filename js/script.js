@@ -55,7 +55,7 @@ const swiper = new Swiper('.swiper', {
 const gallerySwiper = new Swiper('.gallery__swiper', {
   wrapperClass: 'gallery__wrapper',
   slideClass: 'gallery__slide',
-  calculateHeight:true,
+  calculateHeight: true,
   slidesPerGroup: 3,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -109,7 +109,7 @@ document.querySelector('.gallery__slide').addEventListener('click', () => {
 
 // аккардион в каталоге
 
-$( "#accordion" ).accordion({
+$("#accordion").accordion({
   animate: 5,
   heightStyle: "content",
   collapsible: true
@@ -211,35 +211,33 @@ const swiperProject = new Swiper('.project__swiper', {
 
 // карта
 
-let center = [55.75846806898367,37.60108849999989];
+let center = [55.75846806898367, 37.60108849999989];
 
 ymaps.ready(init);
 
-    function init(){
-        // Создание карты.
-        let myMap = new ymaps.Map("map", {
-            center: center,
-            zoom: 15
-        });
+function init() {
+  // Создание карты.
+  let myMap = new ymaps.Map("map", {
+    center: center,
+    zoom: 15
+  });
 
-        let myPlacemark = new ymaps.Placemark(center, {}, {
-          iconLayout: 'default#image',
-          iconImageHref: '../img/map.svg',
-          iconImageSize: [20, 20],
-          iconImageOffset: [0, -10]
-        });
+  let myPlacemark = new ymaps.Placemark(center, {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/map.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-10, -11]
+  });
 
-        // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
-        myMap.controls.remove('searchControl'); // удаляем поиск
-        myMap.controls.remove('trafficControl'); // удаляем контроль трафика
-        myMap.controls.remove('typeSelector'); // удаляем тип
-        myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-        // myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
-        myMap.controls.remove('rulerControl'); // удаляем контрол правил
-        myMap.behaviors.disable(['scrollZoom']);
+  myMap.controls.remove('searchControl'); // удаляем поиск
+  myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+  myMap.controls.remove('typeSelector'); // удаляем тип
+  myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  myMap.controls.remove('rulerControl'); // удаляем контрол правил
+  myMap.behaviors.disable(['scrollZoom']);
 
-        myMap.geoObjects.add(myPlacemark);
-    }
+  myMap.geoObjects.add(myPlacemark);
+}
 
 // tooltip
 
@@ -281,47 +279,45 @@ const validation = new JustValidate('#form', {
   errorFieldCssClass: 'is-invalid',
 })
 
-validation.addField('#name', [
-  {
-    rule: 'required',
-    errorMessage: 'Обязательное поле'
-  },
-  {
-    validator: (value) => {
-      const re = /[a-zA-Zа-яА-я]/g;
-      return Boolean(!value.search(re))
+validation.addField('#name', [{
+      rule: 'required',
+      errorMessage: 'Обязательное поле'
     },
-    errorMessage: 'Недопустимый формат'
-  },
-  {
-    validator: (value) => {
-      return Boolean(value.length < 16)
+    {
+      validator: (value) => {
+        const re = /[a-zA-Zа-яА-я]/g;
+        return Boolean(!value.search(re))
+      },
+      errorMessage: 'Недопустимый формат'
     },
-    errorMessage: 'Слишком длинное имя'
-  },
-  {
-    validator: (value) => {
-      return Boolean(value.length > 2)
+    {
+      validator: (value) => {
+        return Boolean(value.length < 16)
+      },
+      errorMessage: 'Слишком длинное имя'
     },
-    errorMessage: 'Слишком короткое имя'
-  }
-])
-.addField('#tel', [
-  {
-    validator: (value) => {
-      const phone = formTel.inputmask.unmaskedvalue()
-      return Boolean(+phone && phone.length > 0)
+    {
+      validator: (value) => {
+        return Boolean(value.length > 2)
+      },
+      errorMessage: 'Слишком короткое имя'
+    }
+  ])
+  .addField('#tel', [{
+      validator: (value) => {
+        const phone = formTel.inputmask.unmaskedvalue()
+        return Boolean(+phone && phone.length > 0)
+      },
+      errorMessage: 'Обязательное поле'
     },
-    errorMessage: 'Обязательное поле'
-  },
-  {
-    validator: (value) => {
-      const phone = formTel.inputmask.unmaskedvalue()
-      return Boolean(+phone && phone.length === 10)
-    },
-    errorMessage: 'Введите полный номер'
-  }
-])
+    {
+      validator: (value) => {
+        const phone = formTel.inputmask.unmaskedvalue()
+        return Boolean(+phone && phone.length === 10)
+      },
+      errorMessage: 'Введите полный номер'
+    }
+  ])
 
 // поиск header 1400px
 
@@ -337,7 +333,7 @@ headerOpen.addEventListener('click', () => {
   headerLogo.classList.add('header__logo-none')
 })
 
-headerClose.addEventListener('click', () =>{
+headerClose.addEventListener('click', () => {
   headerWrapper.classList.remove('header-top__wrapper-active')
   headerOpen.classList.remove('header__btn-opening')
   burger.classList.remove('burger-none')

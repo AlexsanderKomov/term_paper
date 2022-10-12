@@ -117,12 +117,12 @@
 }
 
 .developments__swiper-button-prev {
-  left: 7%;
+  left: -10px;
   background-image: url(../../img/developments-arrow-prev.svg);
 }
 
 .developments__swiper-button-next {
-  right: 7%;
+  right: -10px;
   background-image: url(../../img/developments-arrow-next.svg);
 }
 
@@ -142,7 +142,7 @@
   visibility: hidden;
 }
 
-.developments__swiper-pagination  {
+.developments__swiper-pagination {
   display: flex;
   justify-content: center;
 }
@@ -158,4 +158,3 @@
 .developments__swiper-pagination .swiper-pagination-bullet:not(:last-child) {
   margin-right: 15px;
 }
-

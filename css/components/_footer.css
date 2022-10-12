@@ -33,12 +33,11 @@ path {
   transition: fill .3s ease-in-out;
 }
 
-.social__link:hover  svg path,
-.social__link:focus  svg path {
+.social__link:hover svg path,
+.social__link:focus svg path {
   fill: var(--color-white);
 }
 
-.social__link:active  svg path {
+.social__link:active svg path {
   fill: var(--color-amethyst);
 }
-

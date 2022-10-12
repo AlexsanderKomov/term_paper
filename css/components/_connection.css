@@ -27,7 +27,7 @@
   column-gap: 20px;
 }
 
- .connection__label {
+.connection__label {
   position: relative;
 }
 
@@ -120,8 +120,6 @@
   outline-color: #c283f3;
 }
 
-
-
 .connection__click {
   display: flex;
   flex-direction: column;
@@ -194,5 +192,3 @@
 .is-invalid {
   border-color: var(--color-error)
 }
-
-

@@ -84,7 +84,7 @@
   z-index: 2;
 }
 
-.ui-accordion-header:focus > .catalog__date {
+.ui-accordion-header:focus>.catalog__date {
   background-color: var(--color-amethyst);
   transition: all .3s ease-in-out;
 }
@@ -136,7 +136,10 @@
   top: -6px;
 }
 
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
   border-radius: 0;
 }
 
@@ -178,7 +181,10 @@
   cursor: pointer;
 }
 
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
   font-family: 'OpenSans', sans-serif;
 }
 
@@ -276,5 +282,3 @@
 .tabs__img {
   margin-bottom: 27px;
 }
-
-

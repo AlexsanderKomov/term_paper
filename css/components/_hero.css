@@ -1,20 +1,20 @@
-.hero__wrapper {
+.hero {
   position: relative;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 35%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.hero__container {
+  position: relative;
   padding-top: clamp(6.563rem, 4.563rem + 3.13vw, 8.313rem);
   padding-bottom: clamp(7.125rem, 6.554rem + 0.89vw, 7.625rem);
-  z-index: 2;
-  pointer-events: none;
-  transition: opacity .3s ease-in-out;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .hero__title {
-  position: relative;
   margin: 0;
+  max-width: 597px;
   text-align: left;
   font-weight: 700;
   font-size: 72px;
@@ -23,19 +23,18 @@
 }
 
 .hero__descr {
-  position: relative;
-  top: -2px;
   margin: 0;
+  max-width: 555px;
   margin-bottom: 89px;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   color: var(--color-white);
+  transform: translateY(-3px);
 }
 
 .hero__btn {
   position: relative;
-  right: 1px;
   padding: 20px 33px 19px 32px;
   border-radius: 100px;
   border: 3px solid transparent;
@@ -45,8 +44,7 @@
   line-height: 25px;
   color: var(--color-white);
   background-color: var(--color-amethyst);
-  pointer-events: all;
-  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .hero__btn:hover {
@@ -54,7 +52,7 @@
 }
 
 .hero__btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -5px;
   right: -5px;
@@ -62,7 +60,7 @@
   left: -5px;
   border-radius: 100px;
   outline: 2px solid transparent;
-  transition: outline-color .3s ease-in-out;
+  transition: outline-color 0.3s ease-in-out;
 }
 
 .hero__btn:active::after {
@@ -84,7 +82,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 800px;
   z-index: 0;
 }
 

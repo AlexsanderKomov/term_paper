@@ -69,7 +69,7 @@
     z-index: 300;
     transform: translateX(-100%);
     opacity: 0;
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
   .header__list-active {
     opacity: 1;
@@ -88,7 +88,7 @@
     padding: 22px 88px 22px 108px;
     z-index: 310;
     background-position: 88px 28px;
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: translateX(-100%);
     opacity: 0;
   }
@@ -119,12 +119,6 @@
   .hero {
     margin-bottom: 80px;
   }
-  .hero__wrapper-active {
-    opacity: 0;
-  }
-  .swiper {
-    height: 768px;
-  }
   .swiper-slide-one {
     background-image: url(../../img/hero-bg-1-1024.jpg);
   }
@@ -134,14 +128,17 @@
   .swiper-slide-three {
     background-image: url(../../img/hero-bg-3-1024.jpg);
   }
-  .hero__wrapper {
-    width: 75%;
+
+  .hero__container {
+    padding-top: 105px;
+    padding-bottom: 115px;
   }
   .hero__title {
     margin-bottom: -9px;
   }
   .hero__descr {
     margin-bottom: 132px;
+    max-width: 75%;
   }
   .about {
     margin-bottom: 70px;
@@ -231,7 +228,7 @@
   .project__swiper-button-next {
     right: 50px;
   }
-  .connection {
+  .connection__container {
     margin-bottom: 38px;
   }
   .connection__street {
@@ -246,10 +243,11 @@
     padding-bottom: 9px;
     transform: translate(0, 0);
   }
+  .connection__connect {
+    margin-bottom: 5px;
+  }
   .footer {
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 28px;
+    padding: 50px 0 27px 0;
   }
   .social__link {
     width: 60px;
@@ -265,12 +263,12 @@
   .burger-none {
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .header__logo-none {
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .header-top__form {
     width: clamp(38.5rem, -8.941rem + 98.84vw, 54.313rem);
@@ -288,8 +286,11 @@
   .swiper-slide-three {
     background-image: url(../../img/hero-bg-3-768.jpg);
   }
-  .hero__wrapper {
-    width: 100%;
+  .hero__title {
+    max-width: 100%;
+  }
+  .hero__descr {
+    max-width: 100%;
   }
   .gallery {
     padding-bottom: 165px;
@@ -338,7 +339,7 @@
     width: 100%;
   }
   .catalog__right {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
     width: 100%;
   }
   .tabs__img {
@@ -436,7 +437,8 @@
 
 @media (max-width: 767.98px) {
   .container {
-    padding: 0 clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
+    padding-right: clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
+    padding-left: clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
   }
   .header__top {
     padding-top: clamp(0.688rem, -0.071rem + 3.79vw, 1.75rem);
@@ -445,12 +447,12 @@
   .burger-none {
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .header__logo-none {
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .header-top__wrapper {
     right: 0;
@@ -516,7 +518,8 @@
     background: rgba(0, 0, 0, 0.9);
   }
   .header__list {
-    padding: clamp(2.938rem, 0.795rem + 10.71vw, 5.938rem) clamp(1rem, -0.518rem + 7.59vw, 3.125rem);
+    padding: clamp(2.938rem, 0.795rem + 10.71vw, 5.938rem)
+      clamp(1rem, -0.518rem + 7.59vw, 3.125rem);
   }
   .header__link {
     font-size: clamp(1rem, 0.643rem + 1.79vw, 1.5rem);
@@ -525,12 +528,16 @@
   .header__btn {
     top: clamp(20rem, 10.446rem + 47.77vw, 33.375rem);
     left: clamp(1rem, -0.518rem + 7.59vw, 3.125rem);
-    padding: clamp(0.625rem, 0.089rem + 2.68vw, 1.375rem) clamp(1.938rem, -0.607rem + 12.72vw, 5.5rem) clamp(0.625rem, 0.089rem + 2.68vw, 1.375rem) clamp(2.813rem, 14.06vw, 6.75rem);
+    padding: clamp(0.625rem, 0.089rem + 2.68vw, 1.375rem)
+      clamp(1.938rem, -0.607rem + 12.72vw, 5.5rem)
+      clamp(0.625rem, 0.089rem + 2.68vw, 1.375rem)
+      clamp(2.813rem, 14.06vw, 6.75rem);
     font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
     line-height: clamp(1rem, 0.598rem + 2.01vw, 1.563rem);
-    background-position: clamp(2rem, -0.5rem + 12.5vw, 5.5rem) clamp(0.813rem, 0.143rem + 3.35vw, 1.75rem);
+    background-position: clamp(2rem, -0.5rem + 12.5vw, 5.5rem)
+      clamp(0.813rem, 0.143rem + 3.35vw, 1.75rem);
     background-size: clamp(0.563rem, 0.384rem + 0.89vw, 0.813rem);
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: translateX(-100%);
     opacity: 0;
   }
@@ -540,9 +547,6 @@
   }
   .hero {
     margin-bottom: 0;
-  }
-  .swiper {
-    height: clamp(22.188rem, 3.749rem + 92.19vw, 48rem);
   }
   .swiper-slide-one {
     background-image: url(../../img/hero-bg-1-320.jpg);
@@ -554,16 +558,12 @@
     background-image: url(../../img/hero-bg-3-320.jpg);
   }
   .hero__container {
-    padding: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem) clamp(2.063rem, 1.304rem + 3.79vw, 3.125rem);
-  }
-  .hero__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: 100%;
+    padding-top: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem);
+    padding-bottom: clamp(2.813rem, -0.313rem + 15.63vw, 7.188rem);
   }
   .hero__title {
     margin-bottom: 4px;
@@ -572,7 +572,7 @@
     text-align: center;
   }
   .hero__descr {
-    width: 98%;
+    width: 85%;
     margin-bottom: 39px;
     font-weight: 400;
     font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
@@ -580,7 +580,10 @@
     text-align: center;
   }
   .hero__btn {
-    padding: clamp(0.563rem, 0.071rem + 2.46vw, 1.25rem) clamp(1.125rem, 0.455rem + 3.35vw, 2.063rem) clamp(0.563rem, 0.116rem + 2.23vw, 1.188rem) clamp(0.875rem, 0.071rem + 4.02vw, 2rem);
+    padding: clamp(0.563rem, 0.071rem + 2.46vw, 1.25rem)
+      clamp(1.125rem, 0.455rem + 3.35vw, 2.063rem)
+      clamp(0.563rem, 0.116rem + 2.23vw, 1.188rem)
+      clamp(0.875rem, 0.071rem + 4.02vw, 2rem);
     font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
     line-height: clamp(1rem, 0.598rem + 2.01vw, 1.563rem);
   }
@@ -588,8 +591,9 @@
     margin-bottom: 0;
   }
   .about__container {
-    padding: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem) clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
-    padding-top: clamp(4.063rem, 3.393rem + 3.35vw, 5rem);
+    padding: clamp(1.875rem, -1.473rem + 16.74vw, 6.563rem)
+      clamp(0.938rem, -0.625rem + 7.81vw, 3.125rem);
+    padding-top: clamp(3.125rem, 1.786rem + 6.7vw, 5rem);
   }
   .about__title {
     margin-bottom: 12px;
@@ -608,7 +612,8 @@
   }
   .gallery__container {
     flex-direction: column;
-    padding: clamp(3.125rem, 1.786rem + 6.7vw, 5rem) clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
+    padding: clamp(3.125rem, 1.786rem + 6.7vw, 5rem)
+      clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
   }
   .gallery__left {
     margin: 0;
@@ -687,6 +692,9 @@
     font-size: clamp(1.75rem, 0.859rem + 4.45vw, 3rem);
     line-height: clamp(2.375rem, 1.039rem + 6.68vw, 4.25rem);
   }
+  .catalog__right {
+    margin-bottom: 45px;
+  }
   .catalog__descr {
     display: none;
   }
@@ -699,7 +707,8 @@
     width: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
     height: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
     background-size: clamp(0.688rem, 0.464rem + 1.12vw, 1rem);
-    background-position: clamp(0.563rem, 0.205rem + 1.79vw, 1.063rem) clamp(0.813rem, 0.634rem + 0.89vw, 1.063rem);
+    background-position: clamp(0.563rem, 0.205rem + 1.79vw, 1.063rem)
+      clamp(0.813rem, 0.634rem + 0.89vw, 1.063rem);
   }
   .ui-accordion .ui-accordion-content {
     padding: clamp(1.25rem, 1.027rem + 1.12vw, 1.563rem) 0;
@@ -826,10 +835,9 @@
   .project__swiper-button-prev {
     bottom: clamp(4.25rem, 3.357rem + 4.46vw, 5.5rem);
   }
-  .connection {
-    margin-bottom: 19px;
-  }
+
   .connection__container {
+    margin-bottom: 20px;
     padding: 0 clamp(0.938rem, -0.622rem + 7.8vw, 3.125rem);
   }
   .connection__address {
@@ -868,13 +876,12 @@
     height: 50px;
     background-size: 50px;
   }
-  .map,
   .map__wrapper {
-    height: clamp(20rem, 3.035rem + 84.83vw, 43.75rem);
+    min-height: clamp(20rem, 3.035rem + 84.83vw, 43.75rem);
   }
   .footer {
     padding-top: 20px;
-    padding-bottom: 33px;
+    padding-bottom: 17px;
   }
   .footer__container {
     flex-direction: column-reverse;

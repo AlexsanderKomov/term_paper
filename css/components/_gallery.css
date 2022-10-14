@@ -47,7 +47,6 @@
   color: var(--color-white);
 }
 
-
 /* choices */
 
 .choices {
@@ -75,7 +74,7 @@
   padding: 3px 15px;
 }
 
-.choices[data-type*=select-one] .choices__inner {
+.choices[data-type*="select-one"] .choices__inner {
   padding: 0;
 }
 
@@ -83,7 +82,7 @@
   opacity: 0.5;
   color: var(--color-white);
   background-color: transparent;
-  transition: opacity .3s ease-in-out, background-color .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted:hover,
@@ -96,14 +95,14 @@
 .choices__list--single .choices__item {
   opacity: 1;
   background-color: transparent;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .choices__list--single:hover .choices__item {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.choices[data-type*=select-one]::after {
+.choices[data-type*="select-one"]::after {
   top: 52%;
   right: 14px;
   width: 12px;
@@ -112,7 +111,7 @@
   background-image: url(../../img/header/header-check-mark.svg);
 }
 
-.choices[data-type*=select-one].is-open::after {
+.choices[data-type*="select-one"].is-open::after {
   top: 45%;
   background-image: url(../../img/header/header-check-mark-reverse.svg);
   margin: 0;
@@ -127,12 +126,12 @@
   border-radius: 6px;
   background-color: transparent;
   color: var(--color-white);
+  z-index: 3;
 }
 
 .choices__list .is-selected {
   display: none;
 }
-
 
 /* century */
 
@@ -141,7 +140,9 @@
 }
 
 .century__list {
-  width: 150px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
 }
 
 .century__item:nth-child(1) {
@@ -157,9 +158,10 @@
   align-items: center;
   justify-content: start;
   flex-direction: row-reverse;
+  outline: none;
   color: var(--color-white);
   cursor: pointer;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .century__check {
@@ -170,7 +172,7 @@
   background-color: transparent;
   width: 12px;
   height: 12px;
-  transition: border-color .3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .century__label:hover .century__check {
@@ -185,13 +187,13 @@
 
 .century__label:active,
 .century__label:active .century__label,
-.century__label:active .century__input+.century__check::before {
+.century__label:active .century__input + .century__check::before {
   color: var(--color-hover);
   border-color: var(--color-hover);
   opacity: 1;
 }
 
-.century__input+.century__check::before {
+.century__input + .century__check::before {
   content: "";
   position: absolute;
   top: 30%;
@@ -201,15 +203,14 @@
   height: 4px;
   border-radius: 100%;
   background-color: var(--color-hover);
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.century__input:checked+.century__check::before,
-.century__input:checked+.century__check {
+.century__input:checked + .century__check::before,
+.century__input:checked + .century__check {
   border-color: var(--color-hover);
   opacity: 1;
 }
-
 
 /* swiper */
 
@@ -242,7 +243,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  transition: outline-color .3s ease-in-out;
+  transition: outline-color 0.3s ease-in-out;
 }
 
 .gallery__slide-one {
@@ -278,14 +279,14 @@
 }
 
 .gallery__slide::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: transparent;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .gallery__slide:active::before {
@@ -293,7 +294,7 @@
 }
 
 .gallery__slide::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   right: 25px;
@@ -305,7 +306,7 @@
   background-size: 81px 79px;
   background-image: url(../../img/gallery/gallery-more.svg);
   opacity: 0;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .gallery__slide:hover::after {
@@ -329,26 +330,26 @@
   background-position: center;
   background-size: 7px;
   outline: 2px solid transparent;
-  transition: outline-color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .swiper-button-next:focus,
 .swiper-button-prev:focus {
   outline-color: #000;
-  transition: outline-color .3s ease-in-out;
+  transition: outline-color 0.3s ease-in-out;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background-color: var(--color-amethyst);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .swiper-button-next:active,
 .swiper-button-prev:active {
   background-color: var(--color-active);
   outline-color: #000;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .swiper-button-prev {
@@ -369,7 +370,6 @@
   color: var(--color-white);
 }
 
-
 /* modal */
 
 .graph-modal {
@@ -379,7 +379,7 @@
   opacity: 0;
   visibility: hidden;
   background-color: #727272;
-  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .graph-modal__container {
@@ -452,25 +452,25 @@
 }
 
 .graph-modal__close::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -2px;
   height: 1px;
   width: 21px;
   background-color: #000;
   transform: rotate(-47deg);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .graph-modal__close::before {
-  content: '';
+  content: "";
   position: absolute;
   right: -2px;
   height: 1px;
   width: 21px;
   background-color: #000;
   transform: rotate(47deg);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .graph-modal__close:hover::before,

@@ -1,11 +1,12 @@
 .footer {
-  padding: 50px 160px 45px;
+  padding: 48px 160px 45px;
   background-color: var(--color-bl);
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 0;
 }
 
@@ -30,7 +31,7 @@
 }
 
 path {
-  transition: fill .3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 
 .social__link:hover svg path,

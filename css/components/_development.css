@@ -61,17 +61,17 @@
   line-height: 32px;
   outline: none;
   color: var(--color-amethyst);
-  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .developments__link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 8px;
   height: 1px;
   width: 86px;
   background-color: var(--color-amethyst);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .developments__link:focus {
@@ -113,7 +113,7 @@
   transform: translateY(-45%);
   cursor: pointer;
   z-index: 100;
-  transition: background-color.3s ease-in-out, outline-color .3s ease-in-out;
+  transition: background-color.3s ease-in-out, outline-color 0.3s ease-in-out;
 }
 
 .developments__swiper-button-prev {

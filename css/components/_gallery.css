@@ -135,16 +135,6 @@
 
 /* century */
 
-:where(input[class="century__input"]) {
-  display: none;
-}
-
-.century__list {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-}
-
 .century__item:nth-child(1) {
   margin-bottom: 13px;
 }
@@ -154,14 +144,35 @@
 }
 
 .century__label {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: row-reverse;
   outline: none;
   color: var(--color-white);
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+}
+
+.century__text {
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.century__label:hover .century__check {
+  border-color: var(--color-hover);
+}
+
+.century__input:focus:not(:checked) ~ .century__content .century__check,
+.century__input:checked ~ .century__content .century__check {
+  border-color: var(--color-hover);
+}
+
+.century__input:active ~ .century__content .century__text,
+.century__input:focus:not(:checked) ~ .century__content .century__text,
+.century__input:checked ~ .century__content .century__text {
+  color: var(--color-hover);
+}
+
+.century__input:checked ~ .century__content .century__check::before,
+.century__input:active ~ .century__content .century__check::before {
+  opacity: 1;
 }
 
 .century__check {
@@ -175,25 +186,7 @@
   transition: border-color 0.3s ease-in-out;
 }
 
-.century__label:hover .century__check {
-  border-color: var(--color-hover);
-}
-
-.century__label:focus .century__check,
-.century__label:focus .century__label {
-  color: var(--color-hover);
-  border-color: var(--color-hover);
-}
-
-.century__label:active,
-.century__label:active .century__label,
-.century__label:active .century__input + .century__check::before {
-  color: var(--color-hover);
-  border-color: var(--color-hover);
-  opacity: 1;
-}
-
-.century__input + .century__check::before {
+.century__check::before {
   content: "";
   position: absolute;
   top: 30%;
@@ -206,11 +199,11 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.century__input:checked + .century__check::before,
-.century__input:checked + .century__check {
+/* .century__label:checked + .century__check::before,
+.century__label:checked + .century__check {
   border-color: var(--color-hover);
   opacity: 1;
-}
+} */
 
 /* swiper */
 

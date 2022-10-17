@@ -74,32 +74,15 @@ body {
   --color-error: #d11616;
 }
 
-/* :where(p[class]) {
-  margin: 0;
-} */
-
 .p-reset {
   margin: 0;
 }
-
-/* :where(ul[class]) {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-} */
 
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-/* :where(button[class]) {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-} */
 
 .btn-reset {
   padding: 0;

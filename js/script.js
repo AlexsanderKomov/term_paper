@@ -115,7 +115,7 @@ document.querySelector(".gallery__slide").addEventListener("click", () => {
 // аккардион в каталоге
 
 $("#accordion").accordion({
-  animate: 5,
+  animate: 500,
   heightStyle: "content",
   collapsible: true,
 });
@@ -370,3 +370,19 @@ burger.addEventListener("click", () => {
   document.body.classList.toggle("stop-scroll");
   heroWrap.classList.toggle("hero__wrapper-active");
 });
+
+// catalog tabs name focus
+const catName = document.querySelectorAll(".catalog__name");
+
+for (let el of catName) {
+  el.addEventListener("click", () => {
+    remo();
+    el.classList.add("catalog__name-active");
+  });
+}
+
+function remo() {
+  for (let el of catName) {
+    el.classList.remove("catalog__name-active");
+  }
+}

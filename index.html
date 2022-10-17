@@ -38,7 +38,6 @@
           <div class="header__wrapper">
             <a class="header__logo" href="#">
               <picture>
-                p-reset
                 <source
                   srcset="img/header/logo-1024.svg"
                   media="(max-width: 1400px)"
@@ -324,37 +323,44 @@
               <div class="gallery__century century">
                 <ul class="list-reset century__list">
                   <li class="century__item">
-                    <label class="century__label" for="nineteen" tabindex="0">
+                    <label class="century__label" tabindex="0">
                       <input
-                        class="century__input"
+                        class="century__input visually-hidden"
                         type="checkbox"
                         name="nineteen"
-                        id="nineteen"
-                      />XIX век
-                      <span class="century__check"></span>
+                      />
+                      <span class="century__content">
+                        <span class="century__check"></span>
+
+                        <span class="century__text">XIX век</span>
+                      </span>
                     </label>
                   </li>
                   <li class="century__item">
-                    <label class="century__label" for="twenty" tabindex="0">
+                    <label class="century__label checkbox" tabindex="0">
                       <input
-                        class="century__input"
+                        class="century__input visually-hidden"
                         checked
                         type="checkbox"
                         name="twenty"
-                        id="twenty"
-                      />XX век
-                      <span class="century__check"></span>
+                      />
+                      <span class="century__content">
+                        <span class="century__check"></span>
+                        <span class="century__text">XX век</span>
+                      </span>
                     </label>
                   </li>
                   <li class="century__item">
-                    <label class="century__label" for="modernity" tabindex="0">
+                    <label class="century__label" tabindex="0">
                       <input
-                        class="century__input"
+                        class="century__input visually-hidden"
                         type="checkbox"
                         name="modernity"
-                        id="modernity"
-                      />Современность
-                      <span class="century__check"></span>
+                      />
+                      <span class="century__content">
+                        <span class="century__check"></span>
+                        <span class="century__text">Современность</span>
+                      </span>
                     </label>
                   </li>
                 </ul>
@@ -405,7 +411,7 @@
                   aria-label="Закрыть модальное окно"
                 ></button>
                 <div class="graph-modal__content">
-                  <picture cp-reset lass="graph-modal__img">
+                  <picture class="graph-modal__img">
                     <source
                       srcset="img/gallery/modal-1-320.jpg"
                       media="(max-width: 767.98px)"
@@ -1380,7 +1386,7 @@
                     </li>
                     <li class="catalog__item">
                       <button
-                        class="btn-reset catalog__name"
+                        class="btn-reset catalog__name catalog__name-active"
                         data-tabs-path="twelve"
                       >
                         Доменико Гирландайо
@@ -1585,7 +1591,7 @@
           <div class="developments__swiper">
             <div class="developments__swiper-wrapper">
               <div class="developments__swiper-slide">
-                <picture cp-reset lass="developments__picture">
+                <picture class="developments__picture">
                   <source
                     srcset="img/developments/developments-1-1024.jpg"
                     media="(max-width: 767.98px)"
@@ -1622,7 +1628,7 @@
                 </div>
               </div>
               <div class="developments__swiper-slide">
-                <picture cp-reset lass="developments__picture">
+                <picture class="developments__picture">
                   <source
                     srcset="img/developments/developments-2-1024.jpg"
                     media="(max-width: 767.98px)"
@@ -1660,7 +1666,7 @@
                 </div>
               </div>
               <div class="developments__swiper-slide">
-                <picture cp-reset lass="developments__picture">
+                <picture class="developments__picture">
                   <source
                     srcset="img/developments/developments-3-1024.jpg"
                     media="(max-width: 767.98px)"

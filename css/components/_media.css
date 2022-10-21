@@ -1,3 +1,8 @@
+@media (min-width: 1921px) {
+  .developments__swiper-slide {
+    outline-offset: -2px;
+  }
+}
 @media (max-width: 1700px) {
   .catalog__list {
     column-gap: 65px;
@@ -128,7 +133,6 @@
   .swiper-slide-three {
     background-image: url(../../img/hero-bg-3-1024.jpg);
   }
-
   .hero__container {
     padding-top: 105px;
     padding-bottom: 115px;
@@ -161,11 +165,17 @@
     padding-bottom: 121px;
     background-image: url(../../img/gallery/gallery-bg-1024.jpg);
   }
+  .gallery__slide {
+    height: clamp(19.688rem, 13.73rem + 9.31vw, 21.875rem);
+  }
   .catalog__left {
     width: clamp(27.313rem, -25.964rem + 83.24vw, 46.875rem);
   }
   .catalog__right {
     width: clamp(27.313rem, -34.475rem + 96.54vw, 50rem);
+  }
+  .century__check {
+    margin-right: 7px;
   }
   .catalog__descr {
     width: 100%;
@@ -194,20 +204,23 @@
     margin-bottom: 50px;
   }
   .developments__wrapper {
-    padding-bottom: 29px;
+    padding-bottom: 43px;
     padding-right: clamp(2.125rem, -0.598rem + 4.26vw, 3.125rem);
     padding-left: clamp(2.125rem, -0.598rem + 4.26vw, 3.125rem);
-    min-height: 452px;
+    min-height: 467px;
   }
   .developments__time {
     margin-bottom: clamp(0.125rem, -1.747rem + 2.93vw, 0.813rem);
     text-align: right;
   }
   .developments__picture {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
   .developments__subtitle {
     margin-bottom: 7px;
+  }
+  .developments__descr {
+    margin-bottom: 19px;
   }
   .project {
     margin-bottom: 123px;
@@ -217,7 +230,7 @@
   .project__container {
     padding-top: 30px;
   }
-  .project__descr {
+  .project__content {
     margin-bottom: 18px;
     width: 100%;
   }
@@ -244,7 +257,8 @@
     transform: translate(0, 0);
   }
   .connection__connect {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    transform: translateX(0);
   }
   .footer {
     padding: 50px 0 27px 0;
@@ -299,8 +313,14 @@
   .gallery__container {
     flex-direction: column;
   }
+  .gallery__title {
+    margin-bottom: 16px;
+  }
   .gallery__swiper {
     max-width: 668px;
+    height: 330px;
+  }
+  .gallery__slide {
     height: 330px;
   }
   .choices {
@@ -375,7 +395,10 @@
   .developments__swiper-pagination .swiper-pagination-bullet:not(:last-child) {
     margin-right: 11px;
   }
-  .project__descr {
+  .developments__picture {
+    margin-bottom: 17px;
+  }
+  .project__content {
     margin-bottom: 26px;
   }
   .project__subtitle {
@@ -432,6 +455,9 @@
   .connection__btn {
     padding: 10.5px 27.5px;
     min-width: clamp(19.813rem, 18.687rem + 2.34vw, 20.188rem);
+  }
+  .footer__link {
+    transform: translateY(2px);
   }
 }
 
@@ -706,9 +732,17 @@
     top: 51%;
     width: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
     height: clamp(1.875rem, 0.982rem + 4.46vw, 3.125rem);
-    background-size: clamp(0.688rem, 0.464rem + 1.12vw, 1rem);
-    background-position: clamp(0.563rem, 0.205rem + 1.79vw, 1.063rem)
-      clamp(0.813rem, 0.634rem + 0.89vw, 1.063rem);
+  }
+  .ui-accordion-header::before {
+    right: clamp(0.938rem, 0.58rem + 1.79vw, 1.438rem);
+    width: clamp(0.5rem, 0.321rem + 0.89vw, 0.75rem);
+    height: clamp(0.5rem, 0.321rem + 0.89vw, 0.75rem);
+  }
+  .ui-accordion-header-active::before {
+    right: clamp(0.688rem, 0.33rem + 1.79vw, 1.188rem);
+  }
+  .ui-accordion .ui-accordion-header:active::after {
+    transform: translateY(-16px);
   }
   .ui-accordion .ui-accordion-content {
     padding: clamp(1.25rem, 1.027rem + 1.12vw, 1.563rem) 0;
@@ -785,7 +819,7 @@
     margin-bottom: 10px;
     font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
   }
-  .project__descr {
+  .project__content {
     margin-bottom: 17px;
   }
   .project__swiper {
@@ -870,14 +904,18 @@
   }
   .connection__connect {
     font-size: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+    letter-spacing: -0.5px;
   }
   .connection__link {
     width: 50px;
     height: 50px;
     background-size: 50px;
   }
+  .connection__link-wa {
+    margin-right: 16px;
+  }
   .map__wrapper {
-    min-height: clamp(20rem, 3.035rem + 84.83vw, 43.75rem);
+    height: clamp(20rem, 3.035rem + 84.83vw, 43.75rem);
   }
   .footer {
     padding-top: 20px;

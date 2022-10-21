@@ -291,7 +291,7 @@
   background-image: url(../../img/header/header-check-mark-reverse.svg);
 }
 
-.header-bottom__btn:focus(:not(:active))::after {
+.header-bottom__btn:focus:not(:active)::after {
   background-color: var(--color-active);
 }
 

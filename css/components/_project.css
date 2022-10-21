@@ -1,5 +1,4 @@
 .project {
-  padding-top: 50px;
   padding-bottom: 80px;
 }
 
@@ -13,50 +12,49 @@
   margin-bottom: 16px;
 }
 
-.project__descr {
-  margin-bottom: 20px;
+.project__content {
+  margin-bottom: 19px;
   width: 67%;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-text);
 }
 
-.project__tooltip {
+.tooltip {
   position: relative;
-  top: 2px;
   display: inline-block;
-  border: 1px solid var(--color-amethyst);
-  border-radius: 100%;
-  width: 16px;
-  height: 16px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transform: translateY(3px);
 }
 
-.project__tooltip::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 100%;
-  background-position: center;
-  background-size: 2px 10px;
-  background-repeat: no-repeat;
-  background-image: url(../../img/project-i.svg);
-  transition: background-image 0.3s ease-in-out;
+.tooltip__marker {
+  outline: none;
 }
 
-.project__tooltip:hover,
-.project__tooltip:focus {
-  background-color: var(--color-vsv);
+.tooltip__bg {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
 }
 
-.project__tooltip:active {
-  background-color: var(--color-amethyst);
+.tooltip__item {
+  fill: var(--color-bl);
+  transition: fill 0.3s ease-in-out;
 }
 
-.project__tooltip:active::after {
-  background-image: url(../../img/project-i-hov.svg);
+.tooltip__marker:hover .tooltip__bg,
+.tooltip__marker:focus .tooltip__bg {
+  fill: var(--color-vsv);
+}
+
+.tooltip__marker:active .tooltip__bg {
+  fill: var(--color-amethyst);
+}
+
+.tooltip__marker:active .tooltip__item {
+  fill: var(--color-white);
+}
+
+.tippy-box[data-animation="opacity"][data-state="hidden"] {
+  opacity: 0;
 }
 
 .project__link {

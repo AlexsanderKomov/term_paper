@@ -250,8 +250,9 @@ function init() {
 
 // tooltip
 
-tippy(".project__tooltip-one", {
-  animation: "scale",
+tippy("#tooltip__btn-one", {
+  duration: [500, 200],
+  animation: "opacity",
   content: "Пример современных тенденций — современная методология разработки",
   maxWidth: 264,
   arrow: true,
@@ -259,8 +260,9 @@ tippy(".project__tooltip-one", {
   trigger: "click",
 });
 
-tippy(".project__tooltip-two", {
-  animation: "scale",
+tippy("#tooltip__btn-two", {
+  duration: [500, 200],
+  animation: "opacity",
   content:
     "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
   maxWidth: 264,
@@ -269,8 +271,9 @@ tippy(".project__tooltip-two", {
   trigger: "click",
 });
 
-tippy(".project__tooltip-three", {
-  animation: "scale",
+tippy("#tooltip__btn-three", {
+  duration: [500, 200],
+  animation: "opacity",
   content: "В стремлении повысить качество",
   maxWidth: 264,
   arrow: true,
@@ -358,7 +361,6 @@ const burger = document.querySelector(".burger");
 const hederList = document.querySelector(".header__list");
 const headerBtn = document.querySelector(".header__btn");
 const burgerLine = document.querySelectorAll(".burger__line");
-const heroWrap = document.querySelector(".hero__wrapper");
 
 burger.addEventListener("click", () => {
   for (let elem of burgerLine) {
@@ -368,8 +370,21 @@ burger.addEventListener("click", () => {
   hederList.classList.toggle("header__list-active");
   headerBtn.classList.toggle("header__btn-active");
   document.body.classList.toggle("stop-scroll");
-  heroWrap.classList.toggle("hero__wrapper-active");
 });
+
+const headerLink = document.querySelectorAll(".header__link");
+
+for (let el of headerLink) {
+  el.addEventListener("click", () => {
+    for (let elem of burgerLine) {
+      elem.classList.toggle("burger__line-active");
+    }
+    burger.classList.remove("burger-active");
+    hederList.classList.remove("header__list-active");
+    headerBtn.classList.remove("header__btn-active");
+    document.body.classList.remove("stop-scroll");
+  });
+}
 
 // catalog tabs name focus
 const catName = document.querySelectorAll(".catalog__name");

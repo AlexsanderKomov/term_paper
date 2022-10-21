@@ -1,6 +1,6 @@
 .developments__container {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 81px;
 }
 
 .developments__title {
@@ -20,7 +20,8 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  border: 1px solid var(--ligth-gray);
+  outline: 1px solid var(--ligth-gray);
+  outline-offset: -1px;
 }
 
 .developments__picture {
@@ -36,6 +37,7 @@
 .developments__wrapper {
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding: 0 50px 34px;
   min-height: 386px;
 }
@@ -50,11 +52,12 @@
 }
 
 .developments__descr {
-  margin-bottom: auto;
+  margin-bottom: 63px;
 }
 
 .developments__link {
   position: relative;
+  margin-top: auto;
   padding: 2px 0 6px 0;
   width: 110px;
   font-size: 16px;
@@ -101,7 +104,7 @@
 
 .developments__swiper-button {
   position: absolute;
-  top: 53%;
+  top: 49.8%;
   border-radius: 100%;
   width: 50px;
   height: 50px;

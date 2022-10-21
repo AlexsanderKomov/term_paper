@@ -60,6 +60,10 @@ body {
   font-weight: 400;
 }
 
+.main {
+  overflow: hidden;
+}
+
 :root {
   --padding-cont: 15px;
   --color-amethyst: #9d5cd0;

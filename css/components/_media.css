@@ -326,6 +326,9 @@
   .choices {
     margin-bottom: 47px;
   }
+  .choices.is-open {
+    margin-bottom: 80px;
+  }
   .gallery__left {
     margin: 0;
     margin-bottom: 20px;
@@ -656,6 +659,9 @@
   .choices {
     margin-bottom: 37px;
     width: 100%;
+  }
+  .choices.is-open {
+    margin-bottom: 80px;
   }
   .graph-modal__content {
     flex-direction: column;
